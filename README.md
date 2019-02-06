@@ -1,13 +1,12 @@
-# Project Name
+# Antsy Reviews
 
-> Project description
+> This project will comprise the reviews component for an item on an ecommerce store
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/antsy-a-product-viewer/shop-summary
+  - https://github.com/antsy-a-product-viewer/Photo-Carousel
+  - https://github.com/antsy-a-product-viewer/Add-Items-to-Cart
 
 ## Table of Contents
 
