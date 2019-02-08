@@ -1,5 +1,5 @@
 var faker = require('faker');
-const sprintf = require('sprintf-js').sprintf;
+var sprintf = require('sprintf-js').sprintf;
 
 let createRecord = (knex, id) => {
   let imageName = sprintf('%05s.jpg', id);

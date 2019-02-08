@@ -2,10 +2,10 @@ var faker = require('faker');
 var sprintf = require('sprintf-js').sprintf;
 
 let createRecord = (knex, id) => {
-  let imageName = sprintf('%05s.jpg');
   var imageUrl;
 
-  if (id < 25) {
+  if (id <= 25) {
+    var imageName = sprintf('%05s.jpg', id);
     imageUrl = 'https://s3-us-west-1.amazonaws.com/antsyreviewimages/' + imageName;
   } else {
     imageUrl = null;

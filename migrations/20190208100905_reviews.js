@@ -6,8 +6,8 @@ exports.up = function(knex, Promise) {
     table.timestamp('createdAt')
     table.string('reviewTxt')
     table.string('reviewImgUrl')
-    table.foreign('userId').references('users.id')
-    table.foreign('itemId').references('items.id')
+    table.integer('userId').unsigned().index().references('id').inTable('users')
+    table.integer('itemId').unsigned().index().references('id').inTable('items')
   })
 };
 
