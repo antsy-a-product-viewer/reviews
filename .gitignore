@@ -27,3 +27,5 @@ dist/
 #keys
 keys.js
 
+#mysql config
+config.txt
