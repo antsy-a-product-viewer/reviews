@@ -17,11 +17,9 @@ exports.seed = function(knex, Promise) {
   return knex('users').del()
     .then(() => {
       let records = [];
-
       for (let i = 1; i <= 30; i++) {
         records.push(createRecord(knex, i))
       }
-
       return Promise.all(records);
     });
 };

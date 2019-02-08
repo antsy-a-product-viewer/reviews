@@ -19,12 +19,9 @@ exports.seed = function(knex, Promise) {
   return knex('items').del()
     .then(() => {
       let records = [];
-
       for(var i = 1; i <= 100; i++) {
-        records.push(createRecord(knex, i))
+        records.push(createRecord(knex, i));
       }
-
       return Promise.all(records);
-
     });
 };
