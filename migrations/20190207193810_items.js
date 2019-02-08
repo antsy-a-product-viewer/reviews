@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments('id')
     table.string('name')
     table.float('price')
-    table.number('store_id')
+    table.integer('store_id')
     table.string('img_url')
   })
 };
