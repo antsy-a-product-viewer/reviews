@@ -1,9 +1,10 @@
 {
-  "name": "",
+  "name": "ReviewsModule",
   "version": "",
   "description": "This is the module on an ecommerce page that shows reviews of the store",
   "author": "",
   "license": "",
+  "main": "server/index.js",
   "engines": {
     "node": ">=6.13.0"
   },
