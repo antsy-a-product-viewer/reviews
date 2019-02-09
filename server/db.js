@@ -6,7 +6,7 @@ const connection = mysql.createConnection(knexConfig);
 connection.connect();
 
 const getAllReviewsForItem = (itemId, callback) => {
-  connection.query('SELECT * FROM reviews where itemId=?', [itemId], (error, results) => {
+  connection.query('SELECT * FROM reviews where item_id=?', [itemId], (error, results) => {
     if (error) {
       throw error;
     } else {
