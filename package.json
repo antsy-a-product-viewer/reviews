@@ -1,13 +1,15 @@
 {
-  "name": "",
+  "name": "ReviewsModule",
   "version": "",
   "description": "This is the module on an ecommerce page that shows reviews of the store",
   "author": "",
   "license": "",
+  "main": "server/index.js",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "server": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
     "create-db": "mysql  --defaults-extra-file=./config.txt < schema.sql",
     "migrations": "node_modules/.bin/knex migrate:latest",
@@ -15,6 +17,7 @@
     "seed-db": "npm run create-db && npm run migrations && npm run seed"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "faker": "^4.1.0",
     "knex": "^0.16.3",
     "mysql": "^2.16.0",
@@ -26,6 +29,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "nodemon": "^1.18.10",
     "webpack": "^4.29.2",
     "webpack-cli": "^3.2.3"
   }
