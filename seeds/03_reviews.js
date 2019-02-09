@@ -4,7 +4,7 @@ var sprintf = require('sprintf-js').sprintf;
 let createRecord = (knex, id) => {
   var imageUrl;
 
-  if (id <= 25) {
+  if (id <= 250) {
     var imageName = sprintf('%05s.jpg', id);
     imageUrl = 'https://s3-us-west-1.amazonaws.com/antsyreviewimages/' + imageName;
   } else {
@@ -17,14 +17,14 @@ let createRecord = (knex, id) => {
       min: 0,
       max: 5
     }),
-    'createdAt': faker.date.past(5),
-    'reviewTxt': faker.hacker.phrase(),
-    'reviewImgUrl': imageUrl,
-    'userId': faker.random.number({
+    created_at: faker.date.past(5),
+    review: faker.hacker.phrase(),
+    img_url: imageUrl,
+    user_id: faker.random.number({
       min: 1,
       max: 30
     }),
-    'itemId': faker.random.number({
+    item_id: faker.random.number({
       min: 1,
       max: 100
     })
