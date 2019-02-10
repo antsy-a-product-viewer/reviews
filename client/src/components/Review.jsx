@@ -2,7 +2,9 @@ import React from 'react';
 
 const profileImgStyle = {
   borderRadius: "50px",
-  float: "left"
+  float: "left",
+  maxWidth: "75%",
+  maxHeight: "75%"
 }
 
 const usernameStyle = {
@@ -30,6 +32,15 @@ const wrapperStyle = {
   float: "left"
 }
 
+const reviewItemStyle ={
+  float: "left"
+}
+
+const reviewItemTextStyle ={
+  float: "left",
+  margin: "25px"
+}
+
 
 const Review = (props) => {
   return (
@@ -53,6 +64,10 @@ const Review = (props) => {
         </div>
         <div className="review-txt">
           <div>Beautiful piece of art! Great details, very high quality brooch. Wonderful seller!</div>
+        </div>
+        <div className="review-item">
+          <img src="https://i.etsystatic.com/10759216/d/il/b478b8/1418735868/il_75x75.1418735868_dnlw.jpg?version=0" style={reviewItemStyle}></img>
+          <div style={reviewItemTextStyle}>Anatomical Heart Brooch, Real Anatomy Pin Stained Glass, Tiff...</div>
         </div>
       </div>
     </div>
