@@ -1,5 +1,9 @@
 import React from 'react';
 
+const containerStyle = {
+  width: 700
+}
+
 const profileImgStyle = {
   borderRadius: "50px",
   float: "left",
@@ -44,7 +48,7 @@ const reviewItemTextStyle ={
 
 const Review = (props) => {
   return (
-    <div>
+    <div style={containerStyle}>
       <div className="profile-pic" style={wrapperStyle}>
         <img style ={profileImgStyle} src="https://i.etsystatic.com/iusa/71374a/55084077/iusa_75x75.55084077_ng7a.jpg?version=0"></img>
       </div>

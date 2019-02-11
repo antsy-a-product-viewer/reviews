@@ -1,5 +1,6 @@
 import React from 'react';
 import Review from './Review.jsx';
+import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
 
 const h1Style = {
   fontSize: "20px",
@@ -15,6 +16,10 @@ class Container extends React.Component {
       <div>
         <h2 style={h1Style}>Reviews</h2>
         <Review />
+        <Review />
+        <Review />
+        <Review />
+        <ReviewPhotosContainer />
       </div>
     )
   }
