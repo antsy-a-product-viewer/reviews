@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReviewPhotos from './components/ReviewPhotos.jsx';
+import Container from './components/Container.jsx';
 
-ReactDOM.render(<ReviewPhotos />, document.getElementById('reviews'));
+ReactDOM.render(<Container />, document.getElementById('reviews'));
