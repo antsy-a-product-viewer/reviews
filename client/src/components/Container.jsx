@@ -14,9 +14,16 @@ const h1Style = {
 class Container extends React.Component {
   constructor(props) {
     super(props);
+    this.clickHandler = this.clickHandler.bind(this);
     this.state = {
       showModal: false
     }
+  }
+
+  clickHandler(event) {
+    this.setState({
+      showModal: !this.state.showModal
+    })
   }
 
   render() {
@@ -28,6 +35,7 @@ class Container extends React.Component {
         <Review />
         <Review />
         <ReviewPhotosContainer /> */}
+        <button onClick={this.clickHandler}>Modal</button>
         <Modal showModal={this.state.showModal}/>
       </div>
     )
