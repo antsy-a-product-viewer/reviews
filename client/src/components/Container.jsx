@@ -2,7 +2,7 @@ import React from 'react';
 import Review from './Review.jsx';
 import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
 import Modal from './Modal.jsx'
-import styles from './containerStyles.css.js';
+import styles from './css/containerStyles.css.js';
 
 class Container extends React.Component {
   constructor(props) {
