@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewPhotosCarousel from './ReviewPhotosCarousel.jsx';
+import styles from './cssModules/ReviewPhotosContainer.module.css';
 
 const reviewPhotosStyle = {
   width: 600,
