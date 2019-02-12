@@ -1,6 +1,7 @@
 import React from 'react';
 import Review from './Review.jsx';
 import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
+import Modal from './Modal.jsx'
 import styles from './containerStyles.css.js';
 
 class Container extends React.Component {
@@ -10,6 +11,12 @@ class Container extends React.Component {
     this.state = {
       showModal: false
     }
+  }
+
+  toggleModal() {
+    this.setState({
+      showModal: !this.state.showModal
+    })
   }
   
   render() {
