@@ -2,14 +2,7 @@ import React from 'react';
 import Review from './Review.jsx';
 import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
 import Modal from './Modal.jsx';
-
-const containerStyle = {
-  width: 750
-}
-
-const h1Style = {
-  fontSize: 20,
-}
+import styles from './css/containerStyles.css.js';
 
 class Container extends React.Component {
   constructor(props) {
@@ -17,22 +10,19 @@ class Container extends React.Component {
     this.toggleModal = this.toggleModal.bind(this);
     this.state = {
       showModal: false
-    }
+    };
   }
 
   toggleModal() {
-    console.log('toggleModal in container hit')
     this.setState({
       showModal: !this.state.showModal
-    })
+    });
   }
-
-  // create a function to select which image to display on modal popup
-
+  
   render() {
     return (
-      <div style={containerStyle}>
-        <h2 style={h1Style}>Reviews</h2>
+      <div style={styles.container}>
+        <h2 style={styles.header}>Reviews</h2>
         <Review />
         <Review />
         <Review />
@@ -41,7 +31,7 @@ class Container extends React.Component {
         <button onClick={this.toggleModal}>Modal</button>
         <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
       </div>
-    )
+    );
   }
 }
 
