@@ -1,35 +1,17 @@
 import React from 'react';
 import ReviewPhotosCarousel from './ReviewPhotosCarousel.jsx';
-
-const reviewPhotosStyle = {
-  width: 600,
-  float: "left"
-}
-
-const reviewHeaderStyle = {
-  display: "flex",
-  justifyContent: "space-between"
-}
-
-const arrowContainerStyle = {
-  float: "right",
-}
-
-const arrowStyle = {
-  marginRight: 20,
-  marginLeft: 20
-}
+import styles from './css/reviewPhotosContainerStyle.css.js';
 
 const ReviewPhotosContainer = (props) => {
   return (
-    <div className="review-photos-container" style={reviewPhotosStyle}>
-      <div className="review-photos-header" style={reviewHeaderStyle}>
+    <div style={styles.reviewPhotos}>
+      <div style={styles.reviewHeader}>
         <h3>Photos from reviews</h3>
-        <div className="photo-arrow" style={{alignSelf: "center"}}>
-          <button style={arrowStyle}>
+        <div style={styles.arrowContainer}>
+          <button style={styles.arrow}>
             <img src="https://www.shareicon.net/data/10x10/2015/10/18/658096_bracket_512x512.png"></img>
           </button>
-          <button style={arrowStyle}>
+          <button style={styles.arrow}>
             <img src="https://www.shareicon.net/data/10x10/2015/10/18/658171_play_512x512.png"></img>
           </button>
         </div>
