@@ -6,6 +6,10 @@ import styles from './containerStyles.css.js';
 class Container extends React.Component {
   constructor(props) {
     super(props);
+    this.toggleModal = this.toggleModal.bind(this);
+    this.state = {
+      showModal: false
+    }
   }
   
   render() {
@@ -17,6 +21,8 @@ class Container extends React.Component {
         <Review />
         <Review />
         <ReviewPhotosContainer />
+        <button onClick={this.toggleModal}>Modal</button>
+        <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
       </div>
     )
   }
