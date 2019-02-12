@@ -14,29 +14,32 @@ const h1Style = {
 class Container extends React.Component {
   constructor(props) {
     super(props);
-    this.clickHandler = this.clickHandler.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
     this.state = {
       showModal: false
     }
   }
 
-  clickHandler(event) {
+  toggleModal() {
+    console.log('toggleModal in container hit')
     this.setState({
       showModal: !this.state.showModal
     })
   }
 
+  // create a function to select which image to display on modal popup
+
   render() {
     return (
       <div style={containerStyle}>
-        {/* <h2 style={h1Style}>Reviews</h2>
+        <h2 style={h1Style}>Reviews</h2>
         <Review />
         <Review />
         <Review />
         <Review />
-        <ReviewPhotosContainer /> */}
-        <button onClick={this.clickHandler}>Modal</button>
-        <Modal showModal={this.state.showModal}/>
+        <ReviewPhotosContainer />
+        <button onClick={this.toggleModal}>Modal</button>
+        <Modal showModal={this.state.showModal} onClose={this.toggleModal}  children="This is a test"/>
       </div>
     )
   }
