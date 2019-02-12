@@ -21,12 +21,15 @@ export default {
   },
 
   reviewContent: {
-    display: 'flex'
+    display: 'flex',
+    justifyContent: 'space-between',
+    maxWidth: 500,
+    maxHeight: 500
   },
 
   image: {
-    maxWidth: '60%',
-    maxHeight: '60%',
+    // maxWidth: '60%',
+    // maxHeight: '60%',
   },
 
   button: {

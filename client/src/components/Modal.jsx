@@ -12,6 +12,7 @@ const Modal = (props) => {
           <div style={styles.reviewContent}>
             <img style={styles.image} src="https://i.etsystatic.com/iap/c08960/1735567682/iap_640x640.1735567682_9rntz5h8.jpg?version=0"></img>
             <Review />
+            {/* <div>some content</div> */}
           </div>
           <div>
             <button style={styles.button} onClick={props.onClose}>
