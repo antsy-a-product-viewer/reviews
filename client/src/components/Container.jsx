@@ -1,24 +1,17 @@
 import React from 'react';
 import Review from './Review.jsx';
 import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
-
-const containerStyle = {
-  width: 750
-}
-
-const h1Style = {
-  fontSize: "20px",
-}
+import styles from './containerStyles.css.js';
 
 class Container extends React.Component {
   constructor(props) {
     super(props);
   }
-// font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  
   render() {
     return (
-      <div style={containerStyle}>
-        <h2 style={h1Style}>Reviews</h2>
+      <div style={styles.container}>
+        <h2 style={styles.header}>Reviews</h2>
         <Review />
         <Review />
         <Review />
