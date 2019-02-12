@@ -15,11 +15,31 @@ export default {
     height: 'auto',
     top: '50%',
     left: '50%',
-    transform: 'translate(-50%,-50%)'
+    transform: 'translate(-50%,-50%)',
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+
+  reviewContent: {
+    display: 'flex'
   },
 
   image: {
     maxWidth: '60%',
-    maxHeight: '60%'
+    maxHeight: '60%',
+  },
+
+  button: {
+    padding: 'none',
+    border: 'none',
+    background: 'none',
+    margin: 5
+  },
+
+  buttonImg: {
+    width: 20,
+    height: 20,
+    background: 'white',
+    margin: 10
   }
 };
