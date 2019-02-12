@@ -11,10 +11,15 @@ export default {
   modalMain: {
     position: 'fixed',
     background: 'white',
-    width: '80%',
+    width: '65%',
     height: 'auto',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%,-50%)'
+  },
+
+  image: {
+    maxWidth: '60%',
+    maxHeight: '60%'
   }
 };
