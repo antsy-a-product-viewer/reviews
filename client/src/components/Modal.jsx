@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './css/modalStyles.css.js'
+import styles from './css/modalStyles.css.js';
 
 const Modal = (props) => {
   if (!props.showModal) {

@@ -18,7 +18,7 @@ const ReviewPhotosContainer = (props) => {
       </div>
       <ReviewPhotosCarousel />
     </div>
-  )
-}
+  );
+};
 
 export default ReviewPhotosContainer;
