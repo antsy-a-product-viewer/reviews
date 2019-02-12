@@ -1,7 +1,10 @@
 const express = require('express');
 const db = require('./db');
 const app = express();
+const path = require('path');
 const port = 3000;
+
+app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 
 app.get('/items/:itemId/reviews', (req, res) => {
