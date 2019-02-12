@@ -39,7 +39,7 @@ class Container extends React.Component {
         <Review />
         <ReviewPhotosContainer />
         <button onClick={this.toggleModal}>Modal</button>
-        <Modal showModal={this.state.showModal} onClose={this.toggleModal}  children="This is a test"/>
+        <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
       </div>
     )
   }

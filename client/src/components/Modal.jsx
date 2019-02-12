@@ -26,7 +26,7 @@ const Modal = (props) => {
     return (
       <div className="modal" style={modalStyle}>
         <section className="modal-main" style={modalMainStyle}>
-          {props.children}
+          <img src="https://i.etsystatic.com/iap/c08960/1735567682/iap_640x640.1735567682_9rntz5h8.jpg?version=0"></img>
           <button onClick={props.onClose}>Close</button>
         </section>
       </div>
