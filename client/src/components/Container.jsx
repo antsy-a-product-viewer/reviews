@@ -28,8 +28,7 @@ class Container extends React.Component {
         <ReviewContainer showPrice="false"/>
         <ReviewContainer showPrice="false"/>
         <ReviewContainer showPrice="false"/>
-        <ReviewPhotosContainer />
-        <button onClick={this.toggleModal}>Modal</button>
+        <ReviewPhotosContainer openModal={this.toggleModal}/>
         <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
       </div>
     );
