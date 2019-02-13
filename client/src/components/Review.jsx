@@ -12,11 +12,11 @@ const Review = (props) => {
       <div>
         <div>
           <div style={styles.starDiv}>
-            <img style={styles.star} src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-star-512.png"></img>
-            <img style={styles.star} src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-star-512.png"></img>
-            <img style={styles.star} src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-star-512.png"></img>
-            <img style={styles.star} src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-star-512.png"></img>
-            <img style={styles.star} src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-star-512.png"></img>
+            <img style={styles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+            <img style={styles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+            <img style={styles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+            <img style={styles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+            <img style={styles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
           </div>
         </div>
         <div>
