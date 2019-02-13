@@ -29,7 +29,7 @@ let createRecord = (knex, id) => {
       max: 100
     })
   });
-}
+};
 
 exports.seed = function(knex, Promise) {
   return knex('reviews').del()
