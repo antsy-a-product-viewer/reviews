@@ -15,7 +15,7 @@ const ReviewContainer = (props) => {
           <div style={styles.date}>Jan 3, 2019</div>
         </div>
         <Review />
-        <Item showPrice="false"/>
+        <Item showPrice={props.showPrice}/>
       </div>
     </div>
   );

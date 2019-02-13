@@ -11,10 +11,40 @@ export default {
   modalMain: {
     position: 'fixed',
     background: 'white',
-    width: '80%',
-    height: 'auto',
-    top: '50%',
+    width: '65%',
+    height: '75%',
+    top: '40%',
     left: '50%',
-    transform: 'translate(-50%,-50%)'
-  }
+    transform: 'translate(-50%,-50%)',
+    display: 'flex',
+    // justifyContent: 'space-between'
+  },
+
+  reviewContent: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    maxWidth: 500,
+    maxHeight: 500
+  },
+
+  image: {
+    // maxWidth: '60%',
+    // maxHeight: '60%',
+  },
+
+  button: {
+    padding: 'none',
+    border: 'none',
+    background: 'none',
+    marginLeft: 'auto',
+    // margin: 5,
+  },
+
+  buttonImg: {
+    width: 20,
+    height: 20,
+    background: 'white',
+    margin: 10
+  },
+
 };
