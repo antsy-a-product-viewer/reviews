@@ -3,6 +3,7 @@ import Review from './Review.jsx';
 import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
 import Modal from './Modal.jsx';
 import styles from './css/containerStyles.css.js';
+import ReviewContainer from './ReviewContainer.jsx';
 
 class Container extends React.Component {
   constructor(props) {
@@ -23,10 +24,10 @@ class Container extends React.Component {
     return (
       <div style={styles.container}>
         <h2 style={styles.header}>Reviews</h2>
-        <Review />
-        <Review />
-        <Review />
-        <Review />
+        <ReviewContainer />
+        <ReviewContainer />
+        <ReviewContainer />
+        <ReviewContainer />
         <ReviewPhotosContainer />
         <button onClick={this.toggleModal}>Modal</button>
         <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
