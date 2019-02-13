@@ -7,5 +7,18 @@ export default {
   starDiv: {
     clear: 'both',
     margin: '5px'
+  },
+
+  info: {
+    display: 'flex'
+  },
+
+  username: {
+    textDecoration: 'underline',
+    margin: 5
+  },
+
+  date: {
+    margin: 5
   }
 };
