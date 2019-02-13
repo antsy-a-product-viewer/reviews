@@ -3,6 +3,7 @@ export default {
     width: 750
   },
   header: {
-    fontSize: '20px',
+    fontSize: 20,
+    margin: 20,
   }
 };
