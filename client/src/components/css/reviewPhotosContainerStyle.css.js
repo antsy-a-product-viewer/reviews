@@ -15,6 +15,9 @@ export default {
 
   arrow: {
     marginRight: 20,
-    marginLeft: 20
+    marginLeft: 20,
+    padding: 'none',
+    border: 'none',
+    background: 'none',
   }
 };
