@@ -1,10 +1,9 @@
 export default {
-  reviewItem: {
-    float: 'left'
+  wrapper: {
+    display: 'flex'
   },
 
-  reviewItemText: {
-    float: 'left',
+  reviewItemInfo: {
     margin: '25px'
   }
 };

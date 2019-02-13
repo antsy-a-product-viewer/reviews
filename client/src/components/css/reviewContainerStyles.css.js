@@ -1,37 +1,26 @@
 export default {
   container: {
-    width: 700
+    width: 700,
+    display: 'flex',
+    margin: 25
   },
 
   profileImg: {
-    borderRadius: '50px',
-    float: 'left',
+    borderRadius: 50,
     maxWidth: '75%',
     maxHeight: '75%'
   },
 
+  info: {
+    display: 'flex'
+  },
+
   username: {
     textDecoration: 'underline',
-    float: 'left',
-    margin: '5px'
+    margin: 5
   },
 
   date: {
-    float: 'left',
-    margin: '5px'
-  },
-
-  star: {
-    width: '20px',
-    height: '20px'
-  },
-
-  starDiv: {
-    clear: 'both',
-    margin: '5px'
-  },
-
-  wrapper: {
-    float: 'left'
+    margin: 5
   }
 };
