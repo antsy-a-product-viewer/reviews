@@ -33,14 +33,5 @@ export default {
 
   wrapper: {
     float: 'left'
-  },
-
-  reviewItem: {
-    float: 'left'
-  },
-
-  reviewItemText: {
-    float: 'left',
-    margin: '25px'
   }
 };
