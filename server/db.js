@@ -27,7 +27,7 @@ const getInfoForReview = (reviewId, callback) => {
 };
 
 const getAllReviewsForStore = (storeId, callback) => {
-  var query = 'SELECT users.img_url AS user_img, users.name AS user_name, reviews.created_at, reviews.stars, reviews.review, items.img_url AS item_img, items.name AS item_name FROM reviews INNER JOIN users ON reviews.user_id = users.id INNER JOIN items ON reviews.item_id = items.id WHERE items.store_id = ? ORDER BY reviews.created_at';
+  var query = 'SELECT users.img_url AS user_img, users.name AS user_name, reviews.created_at, reviews.stars, reviews.review, items.img_url AS item_img, items.name AS item_name FROM reviews INNER JOIN users ON reviews.user_id = users.id INNER JOIN items ON reviews.item_id = items.id WHERE items.store_id = ? ORDER BY reviews.created_at LIMIT 20';
   connection.query(query, [storeId], (error, results) => {
     if (error) {
       throw error;

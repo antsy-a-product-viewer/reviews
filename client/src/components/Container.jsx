@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Review from './Review.jsx';
 import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
 import Modal from './Modal.jsx';
@@ -9,9 +10,15 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
     this.toggleModal = this.toggleModal.bind(this);
+    this.getReviewInfo =this.getReviewInfo.bind(this);
     this.state = {
-      showModal: false
+      showModal: false,
+      reviews: []
     };
+  }
+
+  componentDidMount() {
+    this.getReviewInfo(1);
   }
 
   toggleModal() {
@@ -19,14 +26,20 @@ class Container extends React.Component {
       showModal: !this.state.showModal
     });
   }
+
+  getReviewInfo(storeId) {
+    axios.get(`/stores/${storeId}/reviews`)
+      .then((res) => {
+        this.setState({
+          reviews: res.data
+        });
+      });
+  }
   
   render() {
     return (
       <div style={styles.container}>
         <h2 style={styles.header}>Reviews</h2>
-        <ReviewContainer />
-        <ReviewContainer />
-        <ReviewContainer />
         <ReviewContainer />
         <ReviewPhotosContainer />
         <button onClick={this.toggleModal}>Modal</button>
