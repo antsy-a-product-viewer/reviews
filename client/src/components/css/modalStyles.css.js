@@ -12,12 +12,12 @@ export default {
     position: 'fixed',
     background: 'white',
     width: '65%',
-    height: 'auto',
-    top: '50%',
+    height: '75%',
+    top: '40%',
     left: '50%',
     transform: 'translate(-50%,-50%)',
     display: 'flex',
-    justifyContent: 'space-between'
+    // justifyContent: 'space-between'
   },
 
   reviewContent: {
@@ -36,7 +36,8 @@ export default {
     padding: 'none',
     border: 'none',
     background: 'none',
-    margin: 5
+    marginLeft: 'auto',
+    // margin: 5,
   },
 
   buttonImg: {
@@ -44,5 +45,6 @@ export default {
     height: 20,
     background: 'white',
     margin: 10
-  }
+  },
+
 };

@@ -24,10 +24,10 @@ class Container extends React.Component {
     return (
       <div style={styles.container}>
         <h2 style={styles.header}>Reviews</h2>
-        <ReviewContainer />
-        <ReviewContainer />
-        <ReviewContainer />
-        <ReviewContainer />
+        <ReviewContainer showPrice="false"/>
+        <ReviewContainer showPrice="false"/>
+        <ReviewContainer showPrice="false"/>
+        <ReviewContainer showPrice="false"/>
         <ReviewPhotosContainer />
         <button onClick={this.toggleModal}>Modal</button>
         <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
