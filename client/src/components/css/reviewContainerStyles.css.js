@@ -1,6 +1,5 @@
 export default {
   container: {
-    // width: 700,
     display: 'flex',
     margin: 25
   },
