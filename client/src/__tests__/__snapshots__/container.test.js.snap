@@ -4,6 +4,7 @@ exports[`should render correctly with no props 1`] = `
 <div
   style={
     Object {
+      "fontFamily": "Gill Sans",
       "width": 750,
     }
   }
@@ -12,17 +13,37 @@ exports[`should render correctly with no props 1`] = `
     style={
       Object {
         "fontSize": 20,
-        "margin": 20,
       }
     }
   >
     Reviews
   </h2>
   <ReviewContainer
+    limit={4}
+    reviews={Array []}
     showPrice="false"
   />
+  <div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "none",
+          "border": "none",
+          "fontFamily": "Gill Sans",
+          "fontSize": 16,
+          "marginTop": 20,
+          "padding": 10,
+          "textDecoration": "underline",
+        }
+      }
+    >
+      + More
+    </button>
+  </div>
   <ReviewPhotosContainer
     openModal={[Function]}
+    reviewImages={Array []}
   />
   <Modal
     onClose={[Function]}
