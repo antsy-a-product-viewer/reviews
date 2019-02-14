@@ -12,12 +12,11 @@ export default {
     position: 'fixed',
     background: 'white',
     width: '65%',
-    height: '75%',
-    top: '40%',
+    height: 565,
+    top: '45%',
     left: '50%',
     transform: 'translate(-50%,-50%)',
-    display: 'flex',
-    // justifyContent: 'space-between'
+    display: 'flex'
   },
 
   reviewContent: {
@@ -28,16 +27,14 @@ export default {
   },
 
   image: {
-    // maxWidth: '60%',
-    // maxHeight: '60%',
+    width: 565,
+    height: 565,
   },
 
   button: {
     padding: 'none',
     border: 'none',
-    background: 'none',
-    marginLeft: 'auto',
-    // margin: 5,
+    background: 'none'
   },
 
   buttonImg: {
@@ -47,4 +44,39 @@ export default {
     margin: 10
   },
 
+  profileImg: {
+    borderRadius: 50,
+    width: 50,
+    height: 50
+  },
+
+  userInfo: {
+    display: 'flex',
+    margin: 20
+  },
+
+  username: {
+    textDecoration: 'underline',
+    margin: 5,
+    marginLeft: 15,
+    alignSelf: 'center'
+  },
+
+  date: {
+    margin: 5,
+    alignSelf: 'center'
+  },
+
+  star: {
+    width: '20px',
+    height: '20px'
+  },
+
+  review: {
+    margin: 20
+  },
+
+  item: {
+    margin: 20
+  }
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReviewPhotosCarousel from './ReviewPhotosCarousel.jsx';
-import styles from './css/reviewPhotosContainerStyle.css.js';
+import styles from './css/reviewPhotosContainerStyles.css.js';
 
 const ReviewPhotosContainer = (props) => {
   return (

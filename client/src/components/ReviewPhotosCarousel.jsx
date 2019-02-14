@@ -1,6 +1,5 @@
 import React from 'react';
-import _ from 'underscore';
-import styles from './css/reviewPhotosCarousel.css.js';
+import styles from './css/reviewPhotosCarouselStyles.css';
 
 const ReviewPhotosCarousel = (props) => {
   return (
