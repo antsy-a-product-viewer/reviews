@@ -8,7 +8,8 @@ app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 
 app.get('/items/:itemId/reviews', (req, res) => {
-  db.getAllReviewsForItem(1, (err, data) => {
+  var itemId = req.params.storeId;
+  db.getAllReviewsForItem(itemId, (err, data) => {
     if (err) {
       console.log('error getting item reviews: ', err);
       res.status(400).send(err);
@@ -20,7 +21,8 @@ app.get('/items/:itemId/reviews', (req, res) => {
 });
 
 app.get('/reviews/:reviewId', (req, res) => {
-  db.getInfoForReview(1, (err, data) => {
+  var reviewId = req.params.reviewId;
+  db.getInfoForReview(reviewId, (err, data) => {
     if (err) {
       console.log('error getting review: ', err);
       res.status(400).send(err);
@@ -32,7 +34,8 @@ app.get('/reviews/:reviewId', (req, res) => {
 });
 
 app.get('/stores/:storeId/reviews', (req, res) => {
-  db.getAllReviewsForStore(1, (err, data) => {
+  var storeId = req.params.storeId;
+  db.getAllReviewsForStore(storeId, (err, data) => {
     if (err) {
       console.log('error getting store reviews: ', err);
       res.status(400).send(err);

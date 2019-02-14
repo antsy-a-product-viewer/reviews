@@ -20,8 +20,8 @@ class Container extends React.Component {
   }
 
   componentDidMount() {
-    this.getReviewInfo(1);
-    this.getReviewImages(1);
+    this.getReviewInfo(9);
+    this.getReviewImages(9);
   }
 
   toggleModal() {
@@ -63,7 +63,7 @@ class Container extends React.Component {
     return (
       <div style={containerStyles.container}>
         <h2 style={containerStyles.header}>Reviews</h2>
-        <ReviewContainer showPrice="false"/>
+        <ReviewContainer reviews={this.state.reviews} showPrice="false"/>
         <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
         <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
       </div>
