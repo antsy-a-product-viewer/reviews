@@ -25,9 +25,6 @@ class Container extends React.Component {
       <div style={styles.container}>
         <h2 style={styles.header}>Reviews</h2>
         <ReviewContainer showPrice="false"/>
-        <ReviewContainer showPrice="false"/>
-        <ReviewContainer showPrice="false"/>
-        <ReviewContainer showPrice="false"/>
         <ReviewPhotosContainer openModal={this.toggleModal}/>
         <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
       </div>
