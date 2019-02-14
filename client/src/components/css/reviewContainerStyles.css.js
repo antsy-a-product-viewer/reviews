@@ -9,7 +9,7 @@ export default {
     borderRadius: 50,
     width: 50,
     height: 50,
-    margin: 5
+    margin: 10
   },
 
   info: {
