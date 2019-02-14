@@ -9,7 +9,7 @@ configure({ adapter: new Adapter() });
 it('should render correctly when props.showModal is true', () => {
   const props = {
     showModal: true
-  }
+  };
   const modal = shallow(<Modal showModal={props.showModal}/>);
   
   expect(modal).toMatchSnapshot();
