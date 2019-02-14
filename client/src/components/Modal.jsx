@@ -1,5 +1,7 @@
 import React from 'react';
 import moment from 'moment';
+import _ from 'underscore';
+import Item from './Item.jsx';
 import Review from './Review.jsx';
 import ReviewContainer from './ReviewContainer.jsx';
 import modalStyles from './css/modalStyles.css.js';
@@ -11,13 +13,25 @@ const Modal = (props) => {
     return (
       <div style={modalStyles.modal} onClick={props.onClose}>
         <section style={modalStyles.modalMain}>
-          <img style={modalStyles.image} src="https://i.etsystatic.com/iap/c08960/1735567682/iap_640x640.1735567682_9rntz5h8.jpg?version=0"></img>
-          <div style={modalStyles.userInfo}>
-            <img style ={modalStyles.profileImg} src={reviews[0].user_img}></img>
-            <div style={modalStyles.username}>{reviews[0].user_name}</div>
-            <div style={modalStyles.date}>{moment(reviews[0].created_at).format('MMM DD, YYYY')}</div>
-            <div>
-              {/* <Review review={reviews[0]}/> */}
+          <img style={modalStyles.image} src={reviews[0].item_img}></img>
+          <div>
+            <div style={modalStyles.userInfo}>
+              <img style ={modalStyles.profileImg} src={reviews[0].user_img}></img>
+              <div style={modalStyles.username}>{reviews[0].user_name}</div>
+              <div style={modalStyles.date}>{moment(reviews[0].created_at).format('MMM DD, YYYY')}</div>
+            </div>
+            <div style={modalStyles.review}>
+              <div>
+                {_.times(reviews[0].stars, (n) =>{
+                  return (
+                    <img style={modalStyles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+                  );
+                })}
+              </div>
+              <div>{reviews[0].review}</div>
+            </div>
+            <div style={modalStyles.item}>
+              <Item showPrice="true" review={reviews[0]}/>
             </div>
           </div>
           <button style={modalStyles.button} onClick={props.onClose}>

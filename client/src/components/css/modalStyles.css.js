@@ -50,19 +50,36 @@ export default {
     borderRadius: 50,
     width: 50,
     height: 50,
-    margin: 10
+    // margin: 10
   },
 
   userInfo: {
-    display: 'flex'
+    display: 'flex',
+    margin: 20
   },
 
   username: {
     textDecoration: 'underline',
-    margin: 5
+    margin: 5,
+    marginLeft: 15,
+    alignSelf: 'center'
   },
 
   date: {
-    margin: 5
+    margin: 5,
+    alignSelf: 'center'
+  },
+
+  star: {
+    width: '20px',
+    height: '20px'
+  },
+
+  review: {
+    margin: 20
+  },
+
+  item: {
+    margin: 20
   }
 };
