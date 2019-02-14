@@ -4,11 +4,6 @@ export default {
     height: '20px'
   },
 
-  starDiv: {
-    clear: 'both',
-    margin: '5px'
-  },
-
   info: {
     display: 'flex'
   },

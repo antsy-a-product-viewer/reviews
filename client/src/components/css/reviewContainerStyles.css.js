@@ -7,8 +7,8 @@ export default {
 
   profileImg: {
     borderRadius: 50,
-    width: '15%',
-    height: '15%',
+    width: 50,
+    height: 50,
     margin: 5
   },
 
