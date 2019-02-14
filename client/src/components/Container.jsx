@@ -12,6 +12,7 @@ class Container extends React.Component {
     this.getReviewInfo = this.getReviewInfo.bind(this);
     this.getReviewImages = this.getReviewImages.bind(this);
     this.getAverageStars = this.getAverageStars.bind(this);
+    this.showMore = this.showMore.bind(this);
     this.state = {
       showModal: false,
       reviews: [],
@@ -61,6 +62,12 @@ class Container extends React.Component {
     console.log(`average stars for store: ${average}`);
   }
 
+  showMore() {
+    this.setState({
+      showMore: !this.state.showMore
+    });
+  }
+
 
   
   render() {
@@ -69,7 +76,9 @@ class Container extends React.Component {
         <div style={containerStyles.container}>
           <h2 style={containerStyles.header}>Reviews</h2>
           <ReviewContainer reviews={this.state.reviews} limit={4} showPrice="false"/>
-          <h3 style={{textDecoration: 'underline'}}>+ More</h3>
+          <div>
+            <button style={containerStyles.moreButton} onClick={this.showMore}>+ More</button>
+          </div>
           <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
           <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
         </div>
@@ -79,6 +88,7 @@ class Container extends React.Component {
         <div style={containerStyles.container}>
           <h2 style={containerStyles.header}>Reviews</h2>
           <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false"/>
+          <button style={containerStyles.readAllButton}>Read All Reviews (111)</button>
           <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
           <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
         </div>
