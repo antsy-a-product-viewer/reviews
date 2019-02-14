@@ -15,7 +15,8 @@ class Container extends React.Component {
     this.state = {
       showModal: false,
       reviews: [],
-      reviewImages: []
+      reviewImages: [],
+      showMore: false,
     };
   }
 
@@ -59,16 +60,30 @@ class Container extends React.Component {
     average = Math.floor(total / this.state.reviews.length);
     console.log(`average stars for store: ${average}`);
   }
+
+
   
   render() {
-    return (
-      <div style={containerStyles.container}>
-        <h2 style={containerStyles.header}>Reviews</h2>
-        <ReviewContainer reviews={this.state.reviews} showPrice="false"/>
-        <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
-        <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
-      </div>
-    );
+    if (!this.state.showMore) {
+      return (
+        <div style={containerStyles.container}>
+          <h2 style={containerStyles.header}>Reviews</h2>
+          <ReviewContainer reviews={this.state.reviews} limit={4} showPrice="false"/>
+          <h3 style={{textDecoration: 'underline'}}>+ More</h3>
+          <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
+          <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
+        </div>
+      );
+    } else {
+      return (
+        <div style={containerStyles.container}>
+          <h2 style={containerStyles.header}>Reviews</h2>
+          <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false"/>
+          <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
+          <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
+        </div>
+      );
+    }
   }
 }
 
