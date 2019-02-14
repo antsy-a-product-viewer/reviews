@@ -27,7 +27,7 @@ const getInfoForReview = (reviewId, callback) => {
 };
 
 const getAllReviewsForStore = (storeId, callback) => {
-  var query = 'SELECT users.img_url AS user_img, users.name AS user_name, reviews.created_at, reviews.stars, reviews.review, items.img_url AS item_img, items.name AS item_name FROM reviews INNER JOIN users ON reviews.user_id = users.id INNER JOIN items ON reviews.item_id = items.id WHERE items.store_id = ? ORDER BY reviews.created_at LIMIT 20';
+  var query = 'SELECT users.img_url AS user_img, users.name AS user_name, reviews.created_at, reviews.stars, reviews.review, items.img_url AS item_img, items.name AS item_name FROM reviews INNER JOIN users ON reviews.user_id = users.id INNER JOIN items ON reviews.item_id = items.id WHERE items.store_id = ? ORDER BY reviews.created_at';
   connection.query(query, [storeId], (error, results) => {
     if (error) {
       throw error;
@@ -35,10 +35,22 @@ const getAllReviewsForStore = (storeId, callback) => {
       callback(null, results);
     }
   });
-}
+};
+
+const getReviewImagesForStore = (storeId, callback) => {
+  var query = 'SELECT reviews.id AS review_id, reviews.img_url FROM reviews INNER JOIN items on reviews.item_id = items.id WHERE items.store_id = ? AND reviews.img_url IS NOT NULL ORDER BY created_at';
+  connection.query(query, [storeId], (error, results) => {
+    if (error) {
+      throw error;
+    } else {
+      callback(null, results);
+    }
+  });
+};
 
 module.exports = {
   getAllReviewsForItem,
   getInfoForReview,
-  getAllReviewsForStore
+  getAllReviewsForStore,
+  getReviewImagesForStore
 };
