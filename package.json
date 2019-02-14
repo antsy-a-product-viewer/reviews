@@ -20,7 +20,7 @@
     "migrations": "node_modules/.bin/knex migrate:latest",
     "seed": "node_modules/.bin/knex seed:run",
     "seed-db": "npm run create-db && npm run migrations && npm run seed",
-    "test": "jest --verbose"
+    "test": "jest --verbose --coverage"
   },
   "dependencies": {
     "axios": "^0.18.0",

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly with no props 1`] = `
+<div
+  style={
+    Object {
+      "width": 750,
+    }
+  }
+>
+  <h2
+    style={
+      Object {
+        "fontSize": 20,
+        "margin": 20,
+      }
+    }
+  >
+    Reviews
+  </h2>
+  <ReviewContainer
+    showPrice="false"
+  />
+  <ReviewPhotosContainer
+    openModal={[Function]}
+  />
+  <Modal
+    onClose={[Function]}
+    showModal={false}
+  />
+</div>
+`;
