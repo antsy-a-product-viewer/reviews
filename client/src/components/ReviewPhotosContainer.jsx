@@ -16,7 +16,7 @@ const ReviewPhotosContainer = (props) => {
           </button>
         </div>
       </div>
-      <ReviewPhotosCarousel openModal={props.openModal}/>
+      <ReviewPhotosCarousel reviewImages={props.reviewImages} openModal={props.openModal}/>
     </div>
   );
 };
