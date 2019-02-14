@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly with reviewImages from props 1`] = `
+<div
+  style={
+    Object {
+      "float": "left",
+      "width": 600,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <h3>
+      Photos from reviews
+    </h3>
+    <div
+      style={
+        Object {
+          "alignSelf": "center",
+        }
+      }
+    >
+      <button
+        style={
+          Object {
+            "background": "none",
+            "border": "none",
+            "marginLeft": 20,
+            "marginRight": 20,
+            "padding": "none",
+          }
+        }
+      >
+        <img
+          src="https://www.shareicon.net/data/10x10/2015/10/18/658096_bracket_512x512.png"
+        />
+      </button>
+      <button
+        style={
+          Object {
+            "background": "none",
+            "border": "none",
+            "marginLeft": 20,
+            "marginRight": 20,
+            "padding": "none",
+          }
+        }
+      >
+        <img
+          src="https://www.shareicon.net/data/10x10/2015/10/18/658171_play_512x512.png"
+        />
+      </button>
+    </div>
+  </div>
+  <ReviewPhotosCarousel
+    reviewImages={
+      Array [
+        Object {
+          "img_url": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00119.jpg",
+          "review_id": 119,
+        },
+        Object {
+          "img_url": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00035.jpg",
+          "review_id": 35,
+        },
+        Object {
+          "img_url": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00048.jpg",
+          "review_id": 48,
+        },
+        Object {
+          "img_url": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00141.jpg",
+          "review_id": 141,
+        },
+        Object {
+          "img_url": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00164.jpg",
+          "review_id": 164,
+        },
+      ]
+    }
+  />
+</div>
+`;
