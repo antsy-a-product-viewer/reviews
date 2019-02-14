@@ -14,7 +14,7 @@ let createRecord = (knex, id) => {
   return knex('reviews').insert({
     id,
     stars: faker.random.number({
-      min: 0,
+      min: 1,
       max: 5
     }),
     created_at: faker.date.past(5),
