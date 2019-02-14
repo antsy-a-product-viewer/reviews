@@ -9,18 +9,5 @@ export default {
     width: 50,
     height: 50,
     margin: 10
-  },
-
-  info: {
-    display: 'flex'
-  },
-
-  username: {
-    textDecoration: 'underline',
-    margin: 5
-  },
-
-  date: {
-    margin: 5
   }
 };
