@@ -1,15 +1,15 @@
 import React from 'react';
 import Review from './Review.jsx';
 import Item from './Item.jsx';
-import styles from './css/reviewContainerStyles.css.js';
+import reviewContainerStyles from './css/reviewContainerStyles.css.js';
 
 const ReviewContainer = (props) => {
   return (
     <div>
       {reviews.map((review) => {
         return (
-          <div style={styles.container}>
-            <img style ={styles.profileImg} src={review.user_img}></img>
+          <div style={reviewContainerStyles.container}>
+            <img style ={reviewContainerStyles.profileImg} src={review.user_img}></img>
             <div>
               <Review review={review}/>
               <Item showPrice={props.showPrice} review={review}/>

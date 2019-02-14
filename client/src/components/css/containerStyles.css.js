@@ -4,6 +4,6 @@ export default {
   },
   header: {
     fontSize: 20,
-    margin: 20,
+    // margin: 20,
   }
 };

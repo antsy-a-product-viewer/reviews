@@ -7,7 +7,7 @@ const ReviewPhotosCarousel = (props) => {
     <div>
       {props.reviewImages.map((image) => {
         return (
-          <img onClick={props.openModal} style={styles.reviewImage} src={image.img_url}></img>
+          <img key={image.review_id} onClick={props.openModal} style={styles.reviewImage} src={image.img_url}></img>
         );
       })}
     </div>

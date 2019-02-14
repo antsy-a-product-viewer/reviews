@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
 import Modal from './Modal.jsx';
-import styles from './css/containerStyles.css.js';
+import containerStyles from './css/containerStyles.css.js';
 import ReviewContainer from './ReviewContainer.jsx';
 
 class Container extends React.Component {
@@ -11,6 +11,7 @@ class Container extends React.Component {
     this.toggleModal = this.toggleModal.bind(this);
     this.getReviewInfo = this.getReviewInfo.bind(this);
     this.getReviewImages = this.getReviewImages.bind(this);
+    this.getAverageStars = this.getAverageStars.bind(this);
     this.state = {
       showModal: false,
       reviews: [],
@@ -46,11 +47,22 @@ class Container extends React.Component {
         });
       });
   }
+
+  getAverageStars(storeId) {
+    console.log(this.state.reviews);
+    var average;
+    var total = 0;
+    for (var i = 0; i < this.state.reviews.length; i++) {
+      total += reviews[i].stars;
+    }
+    average = Math.floor(total / this.state.reviews.length);
+    console.log(`average stars for store: ${average}`);
+  }
   
   render() {
     return (
-      <div style={styles.container}>
-        <h2 style={styles.header}>Reviews</h2>
+      <div style={containerStyles.container}>
+        <h2 style={containerStyles.header}>Reviews</h2>
         <ReviewContainer showPrice="false"/>
         <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
         <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
