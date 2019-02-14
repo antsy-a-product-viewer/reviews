@@ -2,8 +2,6 @@ import React from 'react';
 import moment from 'moment';
 import _ from 'underscore';
 import Item from './Item.jsx';
-import Review from './Review.jsx';
-import ReviewContainer from './ReviewContainer.jsx';
 import modalStyles from './css/modalStyles.css.js';
 
 const Modal = (props) => {
@@ -35,7 +33,7 @@ const Modal = (props) => {
             </div>
           </div>
           <button style={modalStyles.button} onClick={props.onClose}>
-            <img style={modalStyles.buttonImg}src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_close-512.png"></img>
+            <img style={modalStyles.buttonImg} src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_close-512.png"></img>
           </button>
         </section>
       </div>
@@ -80,6 +78,6 @@ var reviews = [
     "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00004.jpg",
     "item_name": "Generic Steel Soap"
   }
-]
+];
 
 export default Modal;
