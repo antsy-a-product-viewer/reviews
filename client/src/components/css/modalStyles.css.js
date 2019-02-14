@@ -34,9 +34,7 @@ export default {
   button: {
     padding: 'none',
     border: 'none',
-    background: 'none',
-    marginLeft: 'auto',
-    // margin: 5,
+    background: 'none'
   },
 
   buttonImg: {
@@ -49,8 +47,7 @@ export default {
   profileImg: {
     borderRadius: 50,
     width: 50,
-    height: 50,
-    // margin: 10
+    height: 50
   },
 
   userInfo: {
