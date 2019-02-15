@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import _ from 'underscore';
 import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
 import Modal from './Modal.jsx';
 import containerStyles from './css/containerStyles.css.js';
@@ -61,7 +62,7 @@ class Container extends React.Component {
   }
 
   getReviewImages(storeId) {
-    console.log(`storeId inside of reviewImages: ${storeId}`)
+    console.log(`storeId inside of reviewImages: ${storeId}`);
     axios.get(`/stores/${storeId}/review_images`)
       .then((res) => {
         this.setState({
@@ -97,7 +98,17 @@ class Container extends React.Component {
     if (!this.state.showMore) {
       return (
         <div style={containerStyles.container}>
-          <h2 style={containerStyles.header}>Reviews</h2>
+          <div style={{display: 'flex'}}>
+            <h2 style={containerStyles.header}>Reviews</h2>
+            <div style={{alignSelf: 'center', marginLeft: 10}}>
+              {_.times(this.state.averageStars, (n) =>{
+                return (
+                  <img key={n} style={{width: '20px', height: '20px'}} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+                );
+              })}
+            </div>
+            <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
+          </div>
           <ReviewContainer reviews={this.state.reviews} limit={4} showPrice="false"/>
           <div>
             <button style={containerStyles.moreButton} onClick={this.showMore}>+ More</button>
@@ -111,9 +122,17 @@ class Container extends React.Component {
         <div style={containerStyles.container}>
           <div>
             <h2 style={containerStyles.header}>Reviews</h2>
+            {_.times(5, (n) =>{
+              return (
+                <img key={n} style={{
+                  width: '20px',
+                  height: '20px'
+                }} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+              );
+            })}
           </div>
           <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false"/>
-          <button style={containerStyles.readAllButton}>Read All Reviews (111)</button>
+          <button style={containerStyles.readAllButton}>Read All Reviews ({this.state.reviews.length})</button>
           <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
           <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
         </div>
