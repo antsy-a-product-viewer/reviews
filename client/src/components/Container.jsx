@@ -9,8 +9,8 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
     this.toggleModal = this.toggleModal.bind(this);
-    this.getStoreId = this.getStoreId.bind(this);
-    this.getReviewInfo = this.getReviewInfo.bind(this);
+    this.getData = this.getData.bind(this);
+    this.getReviews = this.getReviews.bind(this);
     this.getReviewImages = this.getReviewImages.bind(this);
     this.getAverageStars = this.getAverageStars.bind(this);
     this.showMore = this.showMore.bind(this);
@@ -25,12 +25,12 @@ class Container extends React.Component {
   }
 
   componentDidMount() {
-    this.getStoreId(20);
+    this.getData(100);
   }
 
   // async componentDidMount() {
-  //   const getStoreId = await axios.get(`/items/20`);
-  //   const getReviewInfo = await axios.get(`/stores/` + getStoreId.data.results.store_id + `/reviews`)
+  //   const getData = await axios.get(`/items/20`);
+  //   const getReviewInfo = await axios.get(`/stores/` + getData.data.results.store_id + `/reviews`)
   // }
 
   toggleModal() {
@@ -39,24 +39,24 @@ class Container extends React.Component {
     });
   }
 
-  // need response from getStoreId to pass to getReviewInfo and getReviewImages to populate the data for the item we are currently viewing
-  getStoreId(itemId) {
-    console.log(`getStoreId called`);
+  // need response from getData to pass to getReviewInfo and getReviewImages to populate the data for the item we are currently viewing
+  getData(itemId) {
+    console.log(`getData called`);
     axios.get(`/items/${itemId}`)
       .then((res) => {
         var storeId = res.data[0].store_id;
         this.setState({
           storeId: storeId
-        })
+        });
         console.log(storeId);
-        this.getReviewInfo(storeId);
+        this.getReviews(storeId);
         this.getReviewImages(storeId);
         // this works but it takes a really long time to render the images
       });
   }
 
-  getReviewInfo(storeId) {
-    console.log(`getReviewInfo called`);
+  getReviews(storeId) {
+    console.log(`getReviews called`);
     axios.get(`/stores/${storeId}/reviews`)
       .then((res) => {
         this.getAverageStars(res.data);
@@ -67,6 +67,7 @@ class Container extends React.Component {
   }
 
   getReviewImages(storeId) {
+    console.log(`storeId inside of reviewImages: ${storeId}`)
     axios.get(`/stores/${storeId}/review_images`)
       .then((res) => {
         this.setState({
@@ -114,7 +115,9 @@ class Container extends React.Component {
     } else {
       return (
         <div style={containerStyles.container}>
-          <h2 style={containerStyles.header}>Reviews</h2>
+          <div>
+            <h2 style={containerStyles.header}>Reviews</h2>
+          </div>
           <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false"/>
           <button style={containerStyles.readAllButton}>Read All Reviews (111)</button>
           <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
