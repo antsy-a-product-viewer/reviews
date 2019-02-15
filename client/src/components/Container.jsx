@@ -18,9 +18,9 @@ class Container extends React.Component {
     this.state = {
       storeId: 0,
       averageStars: 0,
-      showModal: false,
       reviews: [],
       reviewImages: [],
+      showModal: false,
       showMore: false,
     };
   }
@@ -37,14 +37,12 @@ class Container extends React.Component {
 
   getData() {
     var itemId = Math.floor(Math.random() * 100);
-    console.log(`itemId: ${itemId}`);
     axios.get(`/items/${itemId}`)
       .then((res) => {
         var storeId = res.data[0].store_id;
         this.setState({
           storeId: storeId
         });
-        console.log(storeId);
         this.getReviews(storeId);
         this.getReviewImages(storeId);
         // this works but it takes a really long time to render the images
@@ -71,12 +69,11 @@ class Container extends React.Component {
   }
 
   getAverageStars(reviews) {
-    var average;
     var total = 0;
     for (var i = 0; i < reviews.length; i++) {
       total += reviews[i].stars;
     }
-    average = Math.floor(total / reviews.length);
+    var average = Math.floor(total / reviews.length);
     this.setState({
       averageStars: average
     });
