@@ -45,7 +45,6 @@ class Container extends React.Component {
         });
         this.getReviews(storeId);
         this.getReviewImages(storeId);
-        // this works but it takes a really long time to render the images
       });
   }
 
@@ -113,16 +112,16 @@ class Container extends React.Component {
     } else {
       return (
         <div style={containerStyles.container}>
-          <div>
+          <div style={{display: 'flex'}}>
             <h2 style={containerStyles.header}>Reviews</h2>
-            {_.times(5, (n) =>{
-              return (
-                <img key={n} style={{
-                  width: '20px',
-                  height: '20px'
-                }} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
-              );
-            })}
+            <div style={{alignSelf: 'center', marginLeft: 10}}>
+              {_.times(this.state.averageStars, (n) =>{
+                return (
+                  <img key={n} style={{width: '20px', height: '20px'}} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+                );
+              })}
+            </div>
+            <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
           </div>
           <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false"/>
           <button style={containerStyles.readAllButton}>Read All Reviews ({this.state.reviews.length})</button>
