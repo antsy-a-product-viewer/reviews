@@ -26,7 +26,7 @@ class Container extends React.Component {
   }
 
   componentDidMount() {
-    this.getData(100);
+    this.getData(40);
   }
 
   toggleModal() {
@@ -72,7 +72,7 @@ class Container extends React.Component {
   }
 
   getAverageStars(reviews) {
-    console.log(`getAverageStores hit`);
+    console.log(`getAverageStars hit`);
     var average;
     var total = 0;
     for (var i = 0; i < reviews.length; i++) {
