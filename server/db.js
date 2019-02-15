@@ -5,16 +5,6 @@ const connection = mysql.createConnection(knexConfig);
 
 connection.connect();
 
-// const getAllReviewsForItem = (itemId, callback) => {
-//   connection.query('SELECT * FROM reviews where item_id=?', [itemId], (error, results) => {
-//     if (error) {
-//       throw error;
-//     } else {
-//       callback(null, results);
-//     }
-//   });
-// };
-
 const getStoreFromItem = (itemId, callback) => {
   var query = 'SELECT store_id FROM items WHERE id = ?';
   connection.query(query, [itemId], (error, results) => {
@@ -49,7 +39,7 @@ const getAllReviewsForStore = (storeId, callback) => {
 };
 
 const getReviewImagesForStore = (storeId, callback) => {
-  var query = 'SELECT reviews.id AS review_id, reviews.img_url FROM reviews INNER JOIN items on reviews.item_id = items.id WHERE items.store_id = ? AND reviews.img_url IS NOT NULL ORDER BY created_at';
+  var query = 'SELECT reviews.id AS review_id, reviews.img_url AS review_img, reviews.review, reviews.stars, reviews.created_at, items.img_url AS item_img, items.name AS item_name, items.price, users.name AS user_name FROM reviews INNER JOIN items on reviews.item_id = items.id INNER JOIN users on reviews.user_id = users.id WHERE items.store_id = ? AND reviews.img_url IS NOT NULL ORDER BY created_at';
   connection.query(query, [storeId], (error, results) => {
     if (error) {
       throw error;
@@ -60,7 +50,6 @@ const getReviewImagesForStore = (storeId, callback) => {
 };
 
 module.exports = {
-  // getAllReviewsForItem,
   getStoreFromItem,
   getInfoForReview,
   getAllReviewsForStore,

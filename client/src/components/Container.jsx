@@ -28,18 +28,12 @@ class Container extends React.Component {
     this.getData(100);
   }
 
-  // async componentDidMount() {
-  //   const getData = await axios.get(`/items/20`);
-  //   const getReviewInfo = await axios.get(`/stores/` + getData.data.results.store_id + `/reviews`)
-  // }
-
   toggleModal() {
     this.setState({
       showModal: !this.state.showModal
     });
   }
 
-  // need response from getData to pass to getReviewInfo and getReviewImages to populate the data for the item we are currently viewing
   getData(itemId) {
     console.log(`getData called`);
     axios.get(`/items/${itemId}`)
