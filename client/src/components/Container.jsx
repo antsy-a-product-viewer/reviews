@@ -15,7 +15,8 @@ class Container extends React.Component {
     this.getAverageStars = this.getAverageStars.bind(this);
     this.showMore = this.showMore.bind(this);
     this.state = {
-      storeId: 10,
+      storeId: 0,
+      averageStars: 0,
       showModal: false,
       reviews: [],
       reviewImages: [],
@@ -24,11 +25,13 @@ class Container extends React.Component {
   }
 
   componentDidMount() {
-    // i know this doesn't work because they are asynchronous...need a way to chain these together so that getReviewInfo and getReviewImages are run using the result of getStoreId
     this.getStoreId(20);
-    // this.getReviewInfo(this.state.storeId);
-    // this.getReviewImages(this.state.storeId);
   }
+
+  // async componentDidMount() {
+  //   const getStoreId = await axios.get(`/items/20`);
+  //   const getReviewInfo = await axios.get(`/stores/` + getStoreId.data.results.store_id + `/reviews`)
+  // }
 
   toggleModal() {
     this.setState({
@@ -41,11 +44,14 @@ class Container extends React.Component {
     console.log(`getStoreId called`);
     axios.get(`/items/${itemId}`)
       .then((res) => {
-        console.log(res.data[0].store_id);
-        // this.setState({
-        //   storeId: res.data[0].store_id
-        // });
-        getReviewInfo(res.data[0].store_id);
+        var storeId = res.data[0].store_id;
+        this.setState({
+          storeId: storeId
+        })
+        console.log(storeId);
+        this.getReviewInfo(storeId);
+        this.getReviewImages(storeId);
+        // this works but it takes a really long time to render the images
       });
   }
 
@@ -53,6 +59,7 @@ class Container extends React.Component {
     console.log(`getReviewInfo called`);
     axios.get(`/stores/${storeId}/reviews`)
       .then((res) => {
+        this.getAverageStars(res.data);
         this.setState({
           reviews: res.data
         });
@@ -68,15 +75,19 @@ class Container extends React.Component {
       });
   }
 
-  getAverageStars(storeId) {
-    console.log(this.state.reviews);
+  getAverageStars(reviews) {
+    console.log(`getAverageStores hit`);
     var average;
     var total = 0;
-    for (var i = 0; i < this.state.reviews.length; i++) {
+    for (var i = 0; i < reviews.length; i++) {
       total += reviews[i].stars;
     }
-    average = Math.floor(total / this.state.reviews.length);
+    console.log(`total stars: ${total}`);
+    average = Math.floor(total / reviews.length);
     console.log(`average stars for store: ${average}`);
+    this.setState({
+      averageStars: average
+    });
   }
 
   showMore() {
