@@ -9,11 +9,13 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
     this.toggleModal = this.toggleModal.bind(this);
+    this.getStoreId = this.getStoreId.bind(this);
     this.getReviewInfo = this.getReviewInfo.bind(this);
     this.getReviewImages = this.getReviewImages.bind(this);
     this.getAverageStars = this.getAverageStars.bind(this);
     this.showMore = this.showMore.bind(this);
     this.state = {
+      storeId: 10,
       showModal: false,
       reviews: [],
       reviewImages: [],
@@ -22,9 +24,9 @@ class Container extends React.Component {
   }
 
   componentDidMount() {
-    this.getReviewInfo(9);
-    this.getReviewImages(9);
-    this.getAverageStars(9);
+    this.getStoreId(20);
+    this.getReviewInfo(this.state.storeId);
+    this.getReviewImages(this.state.storeId);
   }
 
   toggleModal() {
@@ -33,13 +35,24 @@ class Container extends React.Component {
     });
   }
 
+  getStoreId(itemId) {
+    console.log(`getStoreId called`);
+    axios.get(`/items/${itemId}`)
+      .then((res) => {
+        console.log(res.data[0].store_id);
+        this.setState({
+          storeId: res.data[0].store_id
+        });
+      });
+  }
+
   getReviewInfo(storeId) {
     axios.get(`/stores/${storeId}/reviews`)
       .then((res) => {
         this.setState({
           reviews: res.data
         });
-      });
+      }); 
   }
 
   getReviewImages(storeId) {

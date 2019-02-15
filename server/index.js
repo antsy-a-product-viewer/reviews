@@ -4,17 +4,31 @@ const app = express();
 const path = require('path');
 const port = 3000;
 
+// app.use('/items/:itemId', express.static(path.join(__dirname, '/../client/dist')));
 app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 
-app.get('/items/:itemId/reviews', (req, res) => {
-  var itemId = req.params.storeId;
-  db.getAllReviewsForItem(itemId, (err, data) => {
+// app.get('/items/:itemId/reviews', (req, res) => {
+//   var itemId = req.params.itemId;
+//   db.getAllReviewsForItem(itemId, (err, data) => {
+//     if (err) {
+//       console.log('error getting item reviews: ', err);
+//       res.status(400).send(err);
+//     } else {
+//       console.log('success getting reviews for item');
+//       res.status(200).send(data);
+//     }
+//   });
+// });
+
+app.get('/items/:itemId', (req, res) => {
+  var itemId = req.params.itemId;
+  db.getStoreFromItem(itemId, (err, data) => {
     if (err) {
-      console.log('error getting item reviews: ', err);
+      console.log('error getting storeId: ', err);
       res.status(400).send(err);
     } else {
-      console.log('success getting reviews for item');
+      console.log('success getting storeId');
       res.status(200).send(data);
     }
   });

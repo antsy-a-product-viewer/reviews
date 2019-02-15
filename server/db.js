@@ -5,8 +5,19 @@ const connection = mysql.createConnection(knexConfig);
 
 connection.connect();
 
-const getAllReviewsForItem = (itemId, callback) => {
-  connection.query('SELECT * FROM reviews where item_id=?', [itemId], (error, results) => {
+// const getAllReviewsForItem = (itemId, callback) => {
+//   connection.query('SELECT * FROM reviews where item_id=?', [itemId], (error, results) => {
+//     if (error) {
+//       throw error;
+//     } else {
+//       callback(null, results);
+//     }
+//   });
+// };
+
+const getStoreFromItem = (itemId, callback) => {
+  var query = 'SELECT store_id FROM items WHERE id = ?';
+  connection.query(query, [itemId], (error, results) => {
     if (error) {
       throw error;
     } else {
@@ -49,7 +60,8 @@ const getReviewImagesForStore = (storeId, callback) => {
 };
 
 module.exports = {
-  getAllReviewsForItem,
+  // getAllReviewsForItem,
+  getStoreFromItem,
   getInfoForReview,
   getAllReviewsForStore,
   getReviewImagesForStore
