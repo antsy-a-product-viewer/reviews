@@ -26,7 +26,7 @@ class Container extends React.Component {
   }
 
   componentDidMount() {
-    this.getData(40);
+    this.getData();
   }
 
   toggleModal() {
@@ -35,8 +35,9 @@ class Container extends React.Component {
     });
   }
 
-  getData(itemId) {
-    console.log(`getData called`);
+  getData() {
+    var itemId = Math.floor(Math.random() * 100);
+    console.log(`itemId: ${itemId}`);
     axios.get(`/items/${itemId}`)
       .then((res) => {
         var storeId = res.data[0].store_id;
@@ -51,7 +52,6 @@ class Container extends React.Component {
   }
 
   getReviews(storeId) {
-    console.log(`getReviews called`);
     axios.get(`/stores/${storeId}/reviews`)
       .then((res) => {
         this.getAverageStars(res.data);
@@ -62,7 +62,6 @@ class Container extends React.Component {
   }
 
   getReviewImages(storeId) {
-    console.log(`storeId inside of reviewImages: ${storeId}`);
     axios.get(`/stores/${storeId}/review_images`)
       .then((res) => {
         this.setState({
@@ -72,15 +71,12 @@ class Container extends React.Component {
   }
 
   getAverageStars(reviews) {
-    console.log(`getAverageStars hit`);
     var average;
     var total = 0;
     for (var i = 0; i < reviews.length; i++) {
       total += reviews[i].stars;
     }
-    console.log(`total stars: ${total}`);
     average = Math.floor(total / reviews.length);
-    console.log(`average stars for store: ${average}`);
     this.setState({
       averageStars: average
     });

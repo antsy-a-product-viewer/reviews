@@ -48,7 +48,8 @@ app.get('/stores/:storeId/reviews', (req, res) => {
 });
 
 app.get('/stores/:storeId/review_images', (req, res) => {
-  db.getReviewImagesForStore(1, (err, data) => {
+  var storeId = req.params.storeId;
+  db.getReviewImagesForStore(storeId, (err, data) => {
     if (err) {
       console.log('error getting store review images: ', err);
       res.status(400).send(err);
