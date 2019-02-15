@@ -45,6 +45,9 @@ class Container extends React.Component {
         });
         this.getReviews(storeId);
         this.getReviewImages(storeId);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }
 
@@ -55,6 +58,9 @@ class Container extends React.Component {
         this.setState({
           reviews: res.data
         });
+      })
+      .catch((err) => {
+        console.log(err);
       }); 
   }
 
@@ -64,6 +70,9 @@ class Container extends React.Component {
         this.setState({
           reviewImages: res.data
         });
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }
 
