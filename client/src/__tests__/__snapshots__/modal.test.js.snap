@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly when props.showModal is true 1`] = `
+<div
+  style={
+    Object {
+      "background": "rgba(0, 0, 0, 0.6)",
+      "height": "100%",
+      "left": 0,
+      "position": "fixed",
+      "top": 0,
+      "width": "100%",
+    }
+  }
+>
+  <section
+    style={
+      Object {
+        "background": "white",
+        "display": "flex",
+        "height": 565,
+        "left": "50%",
+        "position": "fixed",
+        "top": "45%",
+        "transform": "translate(-50%,-50%)",
+        "width": "65%",
+      }
+    }
+  >
+    <img
+      src="https://s3-us-west-1.amazonaws.com/antsyitemsimages/00072.jpg"
+      style={
+        Object {
+          "height": 565,
+          "width": 565,
+        }
+      }
+    />
+    <div>
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "margin": 20,
+          }
+        }
+      >
+        <img
+          src="https://s3-us-west-1.amazonaws.com/antsyuserimages/00010.jpg"
+          style={
+            Object {
+              "borderRadius": 50,
+              "height": 50,
+              "width": 50,
+            }
+          }
+        />
+        <div
+          style={
+            Object {
+              "alignSelf": "center",
+              "margin": 5,
+              "marginLeft": 15,
+              "textDecoration": "underline",
+            }
+          }
+        >
+          Jalen Paucek
+        </div>
+        <div
+          style={
+            Object {
+              "alignSelf": "center",
+              "margin": 5,
+            }
+          }
+        >
+          Feb 15, 2014
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 20,
+          }
+        }
+      >
+        <div>
+          <img
+            src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
+            style={
+              Object {
+                "height": "20px",
+                "width": "20px",
+              }
+            }
+          />
+          <img
+            src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
+            style={
+              Object {
+                "height": "20px",
+                "width": "20px",
+              }
+            }
+          />
+          <img
+            src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
+            style={
+              Object {
+                "height": "20px",
+                "width": "20px",
+              }
+            }
+          />
+          <img
+            src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
+            style={
+              Object {
+                "height": "20px",
+                "width": "20px",
+              }
+            }
+          />
+          <img
+            src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
+            style={
+              Object {
+                "height": "20px",
+                "width": "20px",
+              }
+            }
+          />
+        </div>
+        <div>
+          You can't connect the pixel without overriding the auxiliary RSS card!
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 20,
+          }
+        }
+      >
+        <Item
+          review={
+            Object {
+              "created_at": "2014-02-15T21:43:09.000Z",
+              "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00072.jpg",
+              "item_name": "Ergonomic Concrete Tuna",
+              "review": "You can't connect the pixel without overriding the auxiliary RSS card!",
+              "stars": 5,
+              "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00010.jpg",
+              "user_name": "Jalen Paucek",
+            }
+          }
+          showPrice="true"
+        />
+      </div>
+    </div>
+    <button
+      style={
+        Object {
+          "background": "none",
+          "border": "none",
+          "padding": "none",
+        }
+      }
+    >
+      <img
+        src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_close-512.png"
+        style={
+          Object {
+            "background": "white",
+            "height": 20,
+            "margin": 10,
+            "width": 20,
+          }
+        }
+      />
+    </button>
+  </section>
+</div>
+`;

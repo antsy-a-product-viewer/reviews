@@ -9,7 +9,7 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
     this.toggleModal = this.toggleModal.bind(this);
-    this.getReviewInfo = this.getReviewInfo.bind(this);
+    this.getReviews = this.getReviews.bind(this);
     this.getReviewImages = this.getReviewImages.bind(this);
     this.getAverageStars = this.getAverageStars.bind(this);
     this.showMore = this.showMore.bind(this);
@@ -22,7 +22,7 @@ class Container extends React.Component {
   }
 
   componentDidMount() {
-    this.getReviewInfo(9);
+    this.getReviews(9);
     this.getReviewImages(9);
     this.getAverageStars(9);
   }
@@ -33,7 +33,7 @@ class Container extends React.Component {
     });
   }
 
-  getReviewInfo(storeId) {
+  getReviews(storeId) {
     axios.get(`/stores/${storeId}/reviews`)
       .then((res) => {
         this.setState({
