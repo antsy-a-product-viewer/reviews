@@ -24,9 +24,10 @@ class Container extends React.Component {
   }
 
   componentDidMount() {
+    // i know this doesn't work because they are asynchronous...need a way to chain these together so that getReviewInfo and getReviewImages are run using the result of getStoreId
     this.getStoreId(20);
-    this.getReviewInfo(this.state.storeId);
-    this.getReviewImages(this.state.storeId);
+    // this.getReviewInfo(this.state.storeId);
+    // this.getReviewImages(this.state.storeId);
   }
 
   toggleModal() {
@@ -35,18 +36,21 @@ class Container extends React.Component {
     });
   }
 
+  // need response from getStoreId to pass to getReviewInfo and getReviewImages to populate the data for the item we are currently viewing
   getStoreId(itemId) {
     console.log(`getStoreId called`);
     axios.get(`/items/${itemId}`)
       .then((res) => {
         console.log(res.data[0].store_id);
-        this.setState({
-          storeId: res.data[0].store_id
-        });
+        // this.setState({
+        //   storeId: res.data[0].store_id
+        // });
+        getReviewInfo(res.data[0].store_id);
       });
   }
 
   getReviewInfo(storeId) {
+    console.log(`getReviewInfo called`);
     axios.get(`/stores/${storeId}/reviews`)
       .then((res) => {
         this.setState({
