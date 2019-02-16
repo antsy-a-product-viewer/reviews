@@ -104,7 +104,7 @@ class Container extends React.Component {
             <div style={{alignSelf: 'center', marginLeft: 10}}>
               {_.times(this.state.averageStars, (n) =>{
                 return (
-                  <img key={n} style={{width: '20px', height: '20px'}} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+                  <img className="averageStars" key={n} style={{width: '20px', height: '20px'}} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
                 );
               })}
             </div>

@@ -31,7 +31,52 @@ exports[`should render correctly with no props 1`] = `
   </div>
   <div>
     <div>
-      <div />
+      <div>
+        <img
+          className="reviewStar"
+          key="0"
+          src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+        />
+        <img
+          className="reviewStar"
+          key="1"
+          src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+        />
+        <img
+          className="reviewStar"
+          key="2"
+          src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+        />
+        <img
+          className="reviewStar"
+          key="3"
+          src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
+        />
+      </div>
     </div>
     <div>
       <div>

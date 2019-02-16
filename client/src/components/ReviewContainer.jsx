@@ -5,10 +5,10 @@ import reviewContainerStyles from './css/reviewContainerStyles.css.js';
 
 const ReviewContainer = (props) => {
   return (
-    <div className="review">
+    <div>
       {props.reviews && props.reviews.slice(0, props.limit).map((review) => {
         return (
-          <div style={reviewContainerStyles.container}>
+          <div className="review" style={reviewContainerStyles.container}>
             <img style ={reviewContainerStyles.profileImg} src={review.user_img}></img>
             <div>
               <Review key={review.review_id} review={review}/>

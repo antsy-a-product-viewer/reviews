@@ -18,6 +18,17 @@ it('should render correctly with props', () => {
   expect(reviewContainer).toMatchSnapshot();
 });
 
+it('should render only the number of reviews sent as the limit', () => {
+  const props = {
+    reviews: reviews,
+    limit: 20,
+    showPrice: 'false'
+  };
+  const reviewContainer = mount(<ReviewContainer reviews={props.reviews} limit={props.limit} showPrice={props.showPrice}/>);
+  
+  expect(reviewContainer.find('.review')).toHaveLength(20);
+});
+
 const reviews = [
   {
       "review_id": 532,

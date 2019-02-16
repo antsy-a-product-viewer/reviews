@@ -32,7 +32,7 @@ const Modal = (props) => {
               <Item showPrice="true" review={reviews[0]}/>
             </div>
           </div>
-          <button style={modalStyles.button} onClick={props.onClose}>
+          <button className="closeModal" style={modalStyles.button} onClick={props.onClose}>
             <img style={modalStyles.buttonImg} src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_close-512.png"></img>
           </button>
         </section>

@@ -15,7 +15,7 @@ const Review = (props) => {
           <div>
             {_.times(props.review.stars, (n) =>{
               return (
-                <img key={n} style={styles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+                <img className="reviewStar" key={n} style={styles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
               );
             })}
           </div>
