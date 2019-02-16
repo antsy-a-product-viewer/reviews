@@ -37,7 +37,7 @@ class Container extends React.Component {
 
   getData() {
     var itemId = Math.floor(Math.random() * 100);
-    axios.get(`/items/${itemId}`)
+    axios.get(`/items/${itemId}/storeId`)
       .then((res) => {
         var storeId = res.data[0].store_id;
         this.setState({
