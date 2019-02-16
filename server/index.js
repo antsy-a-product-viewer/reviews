@@ -4,8 +4,8 @@ const app = express();
 const path = require('path');
 const port = 3000;
 
-// app.use('/items/:itemId', express.static(path.join(__dirname, '/../client/dist')));
-app.use(express.static(path.join(__dirname, '/../client/dist')));
+app.use('/items/:itemId', express.static(path.join(__dirname, '/../client/dist')));
+// app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 
 app.get('/items/:itemId/store_id', (req, res) => {
