@@ -53,7 +53,6 @@ it('should set the ReviewContainer limit to 20 when showMore is clicked', () => 
   expect(container.find('ReviewContainer').prop('limit')).toEqual(20);
 });
 
-
 const reviews = [
   {
       "review_id": 532,
