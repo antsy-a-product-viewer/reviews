@@ -5,6 +5,7 @@ import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
 import Modal from './Modal.jsx';
 import containerStyles from './css/containerStyles.css.js';
 import ReviewContainer from './ReviewContainer.jsx';
+import Button from './Button.jsx';
 
 class Container extends React.Component {
   constructor(props) {
@@ -21,7 +22,8 @@ class Container extends React.Component {
       reviews: [],
       reviewImages: [],
       showModal: false,
-      showMore: false,
+      show: 4,
+      modal: []
     };
   }
 
@@ -29,9 +31,11 @@ class Container extends React.Component {
     this.getData();
   }
 
-  toggleModal() {
+  toggleModal(reviewImgIndex) {
+    console.log('toggleModal called');
     this.setState({
-      showModal: !this.state.showModal
+      showModal: !this.state.showModal,
+      modalReview: reviewImgIndex
     });
   }
 
@@ -88,15 +92,14 @@ class Container extends React.Component {
   }
 
   showMore() {
+    console.log(`showMore called`)
     this.setState({
-      showMore: !this.state.showMore
+      show: 20
     });
   }
-
-
   
   render() {
-    if (!this.state.showMore) {
+    // if (!this.state.show) {
       return (
         <div style={containerStyles.container}>
           <div style={{display: 'flex'}}>
@@ -110,36 +113,38 @@ class Container extends React.Component {
             </div>
             <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
           </div>
-          <ReviewContainer reviews={this.state.reviews} limit={4} showPrice="false"/>
-          <div>
+          <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false"/>
+          {/* <div>
             <button style={containerStyles.moreButton} onClick={this.showMore}>+ More</button>
-          </div>
+          </div> */}
+          <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
           <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
-          <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
+          <Modal showModal={this.state.showModal} onClose={this.toggleModal} reviews={this.state.reviews[0]}/>
         </div>
       );
-    } else {
-      return (
-        <div style={containerStyles.container}>
-          <div style={{display: 'flex'}}>
-            <h2 style={containerStyles.header}>Reviews</h2>
-            <div style={{alignSelf: 'center', marginLeft: 10}}>
-              {_.times(this.state.averageStars, (n) =>{
-                return (
-                  <img key={n} style={{width: '20px', height: '20px'}} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
-                );
-              })}
-            </div>
-            <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
-          </div>
-          <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false"/>
-          <button style={containerStyles.readAllButton}>Read All Reviews ({this.state.reviews.length})</button>
-          <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
-          <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
-        </div>
-      );
-    }
+    // } else {
+    //   return (
+    //     <div style={containerStyles.container}>
+    //       <div style={{display: 'flex'}}>
+    //         <h2 style={containerStyles.header}>Reviews</h2>
+    //         <div style={{alignSelf: 'center', marginLeft: 10}}>
+    //           {_.times(this.state.averageStars, (n) =>{
+    //             return (
+    //               <img key={n} style={{width: '20px', height: '20px'}} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+    //             );
+    //           })}
+    //         </div>
+    //         <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
+    //       </div>
+    //       <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false"/>
+    //       <button style={containerStyles.readAllButton}>Read All Reviews ({this.state.reviews.length})</button>
+    //       <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
+    //       <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
+    //     </div>
+    //   );
+    // }
   }
 }
+
 
 export default Container;
