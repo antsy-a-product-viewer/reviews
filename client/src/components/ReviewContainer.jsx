@@ -12,7 +12,7 @@ const ReviewContainer = (props) => {
             <img style ={reviewContainerStyles.profileImg} src={review.user_img}></img>
             <div>
               <Review key={review.review_id} review={review}/>
-              <Item key={review.item_id} showPrice={props.showPrice} review={review}/>
+              <Item key={review.item_id} showPrice={props.showPrice} review={review} visitItem={props.visitItem}/>
             </div>
           </div>
         );

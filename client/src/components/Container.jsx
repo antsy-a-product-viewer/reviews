@@ -15,6 +15,7 @@ class Container extends React.Component {
     this.getReviewImages = this.getReviewImages.bind(this);
     this.getAverageStars = this.getAverageStars.bind(this);
     this.showMore = this.showMore.bind(this);
+    this.visitItem = this.visitItem.bind(this);
     this.state = {
       storeId: 0,
       averageStars: 0,
@@ -35,10 +36,12 @@ class Container extends React.Component {
     });
   }
 
-  getData() {
-    // var itemId = Math.floor(Math.random() * 100);
-    // axios.get(`/items/${itemId}/store_id`)
-    var endpoint = window.location.pathname + 'store_id';
+  getData(itemId) {
+    if (itemId) {
+      var endpoint = `/items/${itemId}/store_id`;
+    } else {
+      var endpoint = window.location.pathname + 'store_id';
+    }
     console.log(endpoint);
     axios.get(endpoint)
       .then((res) => {
@@ -96,6 +99,10 @@ class Container extends React.Component {
     });
   }
 
+  visitItem(itemId) {
+    window.location.pathname = `/items/${itemId}`;
+  }
+
 
   
   render() {
@@ -113,7 +120,7 @@ class Container extends React.Component {
             </div>
             <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
           </div>
-          <ReviewContainer reviews={this.state.reviews} limit={4} showPrice="false"/>
+          <ReviewContainer reviews={this.state.reviews} limit={4} showPrice="false" visitItem={this.visitItem}/>
           <div>
             <button style={containerStyles.moreButton} onClick={this.showMore}>+ More</button>
           </div>
@@ -135,7 +142,7 @@ class Container extends React.Component {
             </div>
             <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
           </div>
-          <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false"/>
+          <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false" visitItem={this.visitItem}/>
           <button style={containerStyles.readAllButton}>Read All Reviews ({this.state.reviews.length})</button>
           <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
           <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
