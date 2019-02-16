@@ -27,5 +27,15 @@ export default {
     color: 'white',
     borderColor: 'black',
     marginTop: 20
+  },
+
+  star: {
+    width: 20, 
+    height: 20
+  },
+
+  centeredDiv: {
+    alignSelf: 'center', 
+    marginLeft: 10
   }
 };

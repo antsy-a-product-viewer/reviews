@@ -99,50 +99,25 @@ class Container extends React.Component {
   }
   
   render() {
-    // if (!this.state.show) {
-      return (
-        <div style={containerStyles.container}>
-          <div style={{display: 'flex'}}>
-            <h2 style={containerStyles.header}>Reviews</h2>
-            <div style={{alignSelf: 'center', marginLeft: 10}}>
-              {_.times(this.state.averageStars, (n) =>{
-                return (
-                  <img key={n} style={{width: '20px', height: '20px'}} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
-                );
-              })}
-            </div>
-            <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
+    return (
+      <div style={containerStyles.container}>
+        <div style={{display: 'flex'}}>
+          <h2 style={containerStyles.header}>Reviews</h2>
+          <div style={containerStyles.centeredDiv}>
+            {_.times(this.state.averageStars, (n) =>{
+              return (
+                <img key={n} style={containerStyles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
+              );
+            })}
           </div>
-          <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false"/>
-          {/* <div>
-            <button style={containerStyles.moreButton} onClick={this.showMore}>+ More</button>
-          </div> */}
-          <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
-          <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
-          <Modal showModal={this.state.showModal} onClose={this.toggleModal} reviews={this.state.reviews[0]}/>
+          <div style={containerStyles.centeredDiv}>({this.state.reviews.length})</div>
         </div>
-      );
-    // } else {
-    //   return (
-    //     <div style={containerStyles.container}>
-    //       <div style={{display: 'flex'}}>
-    //         <h2 style={containerStyles.header}>Reviews</h2>
-    //         <div style={{alignSelf: 'center', marginLeft: 10}}>
-    //           {_.times(this.state.averageStars, (n) =>{
-    //             return (
-    //               <img key={n} style={{width: '20px', height: '20px'}} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
-    //             );
-    //           })}
-    //         </div>
-    //         <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
-    //       </div>
-    //       <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false"/>
-    //       <button style={containerStyles.readAllButton}>Read All Reviews ({this.state.reviews.length})</button>
-    //       <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
-    //       <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
-    //     </div>
-    //   );
-    // }
+        <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false"/>
+        <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
+        <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
+        <Modal showModal={this.state.showModal} onClose={this.toggleModal} reviews={this.state.reviewImages[0]}/>
+      </div>
+    );
   }
 }
 
