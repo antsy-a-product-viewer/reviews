@@ -9,16 +9,16 @@ const Item = (props) => {
 
   if (props.showPrice === 'false') {
     return (
-      <div style={itemStyles.wrapper} onClick={clickItem}>
-        <img id={props.review.item_id} style={itemStyles.itemImg} src={props.review.item_img}></img>
-        <div id={props.review.item_id} style={itemStyles.reviewItemInfo}>{props.review.item_name}</div>
+      <div style={itemStyles.wrapper}>
+        <img id={props.review.item_id} style={itemStyles.itemImg} onClick={clickItem} src={props.review.item_img}></img>
+        <div id={props.review.item_id} style={itemStyles.reviewItemInfo} onClick={clickItem}>{props.review.item_name}</div>
       </div>
     );
   } else {
     return (
       <div style={itemStyles.wrapper}>
-        <img id={props.review.item_id} style={itemStyles.itemImg} src={props.review.item_img}></img>
-        <div id={props.review.item_id} style={itemStyles.reviewItemInfo}>
+        <img id={props.review.item_id} style={itemStyles.itemImg} onClick={clickItem} src={props.review.item_img}></img>
+        <div id={props.review.item_id} style={itemStyles.reviewItemInfo} onClick={clickItem}>
           <div>{props.review.item_name}</div>
           <div>$36.00</div>
         </div>

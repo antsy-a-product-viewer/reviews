@@ -36,12 +36,8 @@ class Container extends React.Component {
     });
   }
 
-  getData(itemId) {
-    if (itemId) {
-      var endpoint = `/items/${itemId}/store_id`;
-    } else {
-      var endpoint = window.location.pathname + 'store_id';
-    }
+  getData() {
+    var endpoint = window.location.pathname + 'store_id';
     console.log(endpoint);
     axios.get(endpoint)
       .then((res) => {
