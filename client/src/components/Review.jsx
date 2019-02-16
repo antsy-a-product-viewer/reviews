@@ -1,4 +1,5 @@
 import React from 'react';
+import Star from './Star.jsx';
 import moment from 'moment';
 import _ from 'underscore';
 import styles from './css/reviewStyles.css.js';
@@ -12,13 +13,7 @@ const Review = (props) => {
       </div>
       <div>
         <div>
-          <div>
-            {_.times(props.review.stars, (n) =>{
-              return (
-                <img key={n} style={styles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
-              );
-            })}
-          </div>
+          <Star stars={props.stars}/>
         </div>
         <div>
           <div>{props.review.review}</div>
