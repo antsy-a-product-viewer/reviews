@@ -5,7 +5,7 @@ import reviewContainerStyles from './css/reviewContainerStyles.css.js';
 
 const ReviewContainer = (props) => {
   return (
-    <div>
+    <div className="review">
       {props.reviews && props.reviews.slice(0, props.limit).map((review) => {
         return (
           <div style={reviewContainerStyles.container}>

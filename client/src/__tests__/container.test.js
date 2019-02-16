@@ -12,9 +12,16 @@ it('should render correctly with no props', () => {
   expect(container).toMatchSnapshot();
 });
 
-it('should call getReviews during componentDidMount', () => {
-  const getReviews = jest.spyOn(Container.prototype, 'getReviews');
+it('should call getData during componentDidMount', () => {
+  const getData = jest.spyOn(Container.prototype, 'getData');
   const container = mount(<Container />);
 
-  expect(getReviews).toHaveBeenCalledTimes(1);
+  expect(getData).toHaveBeenCalledTimes(1);
+});
+
+it('should display the modal when showModal state is true', () =>{
+  const container = mount(<Container />);
+  container.setState({showModal: true});
+
+  expect(container.find('.modal').exists()).toEqual(true);
 });

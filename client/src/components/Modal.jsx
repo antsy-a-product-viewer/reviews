@@ -9,7 +9,7 @@ const Modal = (props) => {
     return null;
   } else {
     return (
-      <div style={modalStyles.modal} onClick={props.onClose}>
+      <div className="modal" style={modalStyles.modal} onClick={props.onClose}>
         <section style={modalStyles.modalMain}>
           <img style={modalStyles.image} src={reviews[0].item_img}></img>
           <div>
