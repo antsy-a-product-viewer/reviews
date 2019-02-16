@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import _ from 'underscore';
+import Star from './Star.jsx';
 import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
 import Modal from './Modal.jsx';
 import containerStyles from './css/containerStyles.css.js';
@@ -92,7 +93,6 @@ class Container extends React.Component {
   }
 
   showMore() {
-    console.log(`showMore called`)
     this.setState({
       show: 20
     });
@@ -102,15 +102,13 @@ class Container extends React.Component {
     return (
       <div style={containerStyles.container}>
         <div style={{display: 'flex'}}>
-          <h2 style={containerStyles.header}>Reviews</h2>
+          <h2 style={containerStyles.header}>
+            Reviews
+          </h2>
+          <Star stars={this.state.averageStars}/>
           <div style={containerStyles.centeredDiv}>
-            {_.times(this.state.averageStars, (n) =>{
-              return (
-                <img key={n} style={containerStyles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
-              );
-            })}
+            ({this.state.reviews.length})
           </div>
-          <div style={containerStyles.centeredDiv}>({this.state.reviews.length})</div>
         </div>
         <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false"/>
         <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>

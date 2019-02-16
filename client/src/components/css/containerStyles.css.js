@@ -6,6 +6,7 @@ export default {
 
   header: {
     fontSize: 20,
+    marginRight: 10
   },
 
   moreButton: {
