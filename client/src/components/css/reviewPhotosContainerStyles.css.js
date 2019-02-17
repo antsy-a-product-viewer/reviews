@@ -6,7 +6,8 @@ export default {
 
   reviewHeader: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    marginTop: 20
   },
 
   arrowContainer: {

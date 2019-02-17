@@ -5,12 +5,14 @@ export default {
   },
 
   reviewItemInfo: {
-    margin: '25px'
+    margin: '25px',
+    cursor: 'pointer'
   },
 
   itemImg: {
     width: 75,
     height: 75,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    cursor: 'pointer'
   }
 };

@@ -112,9 +112,9 @@ class Container extends React.Component {
     return (
       <div style={containerStyles.container}>
         <div style={{display: 'flex'}}>
-          <h2 style={containerStyles.header}>
+          <div style={containerStyles.header}>
             Reviews
-          </h2>
+          </div>
           <Star stars={this.state.averageStars}/>
           <div style={containerStyles.centeredDiv}>
             ({this.state.reviews.length})
