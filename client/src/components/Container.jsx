@@ -11,7 +11,8 @@ import Button from './Button.jsx';
 class Container extends React.Component {
   constructor(props) {
     super(props);
-    this.toggleModal = this.toggleModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
     this.getData = this.getData.bind(this);
     this.getReviews = this.getReviews.bind(this);
     this.getReviewImages = this.getReviewImages.bind(this);
@@ -32,12 +33,20 @@ class Container extends React.Component {
     this.getData();
   }
 
-  toggleModal(reviewImgIndex) {
-    console.log(`toggleModal called with: ${reviewImgIndex}`);
+  openModal(reviewImgIndex) {
     this.setState({
       modalReview: reviewImgIndex,
       showModal: !this.state.showModal
     });
+  }
+
+  closeModal(e) {
+    console.log(`e.target.id: ${e.target.id}`);
+    if (e.target.id === 'modal-overlay' || e.target.id === 'close-modal') {
+      this.setState({
+        showModal: !this.state.showModal
+      });
+    }
   }
 
   getData() {
@@ -112,8 +121,8 @@ class Container extends React.Component {
         </div>
         <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false"/>
         <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
-        <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
-        <Modal showModal={this.state.showModal} onClose={this.toggleModal} review={this.state.reviewImages[this.state.modalReview]}/>
+        <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.openModal}/>
+        <Modal showModal={this.state.showModal} onClose={this.closeModal} review={this.state.reviewImages[this.state.modalReview]}/>
       </div>
     );
   }

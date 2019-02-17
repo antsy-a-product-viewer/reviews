@@ -10,7 +10,7 @@ const Modal = (props) => {
     return null;
   } else {
     return (
-      <div style={modalStyles.modal} onClick={props.onClose}>
+      <div id="modal-overlay" style={modalStyles.modal} onClick={props.onClose}>
         <section style={modalStyles.modalMain}>
           <div>
             <img style={modalStyles.image} src={props.review.review_img}></img>
@@ -33,7 +33,7 @@ const Modal = (props) => {
               </div>
             </div>
           </div>
-          <button style={modalStyles.button} onClick={props.onClose}>
+          <button id="close-modal" style={modalStyles.button} onClick={props.onClose}>
             <img style={modalStyles.buttonImg} src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_close-512.png"></img>
           </button>
         </section>
