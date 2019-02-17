@@ -10,6 +10,7 @@ export default {
 
   itemImg: {
     width: 75,
-    height: 75
+    height: 75,
+    alignSelf: 'center'
   }
 };
