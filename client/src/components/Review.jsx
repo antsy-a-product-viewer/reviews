@@ -14,8 +14,6 @@ const Review = (props) => {
       <div>
         <div>
           <Star stars={props.stars}/>
-        </div>
-        <div>
           <div>{props.review.review}</div>
         </div>
       </div>

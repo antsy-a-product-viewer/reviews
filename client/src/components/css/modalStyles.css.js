@@ -34,7 +34,8 @@ export default {
   button: {
     padding: 'none',
     border: 'none',
-    background: 'none'
+    background: 'none',
+    transform: 'translate(1140px, 25px)'
   },
 
   buttonImg: {

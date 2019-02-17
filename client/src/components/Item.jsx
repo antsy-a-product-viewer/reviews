@@ -15,7 +15,7 @@ const Item = (props) => {
         <img style={itemStyles.itemImg} src={props.review.item_img}></img>
         <div style={itemStyles.reviewItemInfo}>
           <div>{props.review.item_name}</div>
-          <div>$36.00</div>
+          <div>${props.review.price}.00</div>
         </div>
       </div>
     );
