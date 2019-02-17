@@ -16,7 +16,8 @@ export default {
     border: 'none',
     backgroundColor: 'none',
     padding: 10,
-    marginTop: 20
+    marginTop: 20,
+    cursor: 'pointer'
   },
 
   readAllButton: {
@@ -27,7 +28,8 @@ export default {
     backgroundColor: 'black',
     color: 'white',
     borderColor: 'black',
-    marginTop: 20
+    marginTop: 20,
+    cursor: 'pointer'
   },
 
   star: {

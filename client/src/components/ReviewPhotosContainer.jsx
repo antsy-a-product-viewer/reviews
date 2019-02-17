@@ -8,10 +8,10 @@ const ReviewPhotosContainer = (props) => {
       <div style={styles.reviewHeader}>
         <h3>Photos from reviews</h3>
         <div style={styles.arrowContainer}>
-          <button style={styles.arrow}>
+          <button style={styles.arrowLeft}>
             <img src="https://www.shareicon.net/data/10x10/2015/10/18/658096_bracket_512x512.png"></img>
           </button>
-          <button style={styles.arrow}>
+          <button style={styles.arrowRight}>
             <img src="https://www.shareicon.net/data/10x10/2015/10/18/658171_play_512x512.png"></img>
           </button>
         </div>
