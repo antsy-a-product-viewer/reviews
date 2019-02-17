@@ -3,6 +3,7 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
 import Modal from '../components/Modal.jsx';
+import Container from '../components/Container.jsx'
 
 configure({ adapter: new Adapter() });
 
@@ -29,4 +30,4 @@ const reviewImages = [
     "user_name": "Peter Blick DDS",
     "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00016.jpg"
   }
-]
+];
