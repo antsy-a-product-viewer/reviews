@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import _ from 'underscore';
+import Star from './Star.jsx'
 import Item from './Item.jsx';
 import modalStyles from './css/modalStyles.css.js';
 
@@ -8,6 +9,7 @@ const Modal = (props) => {
   if (!props.showModal) {
     return null;
   } else {
+    console.log(props.reviews.user_img);
     return (
       <div style={modalStyles.modal} onClick={props.onClose}>
         <section style={modalStyles.modalMain}>
@@ -19,13 +21,7 @@ const Modal = (props) => {
               <div style={modalStyles.date}>{moment(props.reviews.created_at).format('MMM DD, YYYY')}</div>
             </div>
             <div style={modalStyles.review}>
-              <div>
-                {_.times(props.reviews.stars, (n) =>{
-                  return (
-                    <img style={modalStyles.star} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
-                  );
-                })}
-              </div>
+              <Star stars={props.reviews.stars}/>
               <div>{props.reviews.review}</div>
             </div>
             <div style={modalStyles.item}>
