@@ -6,6 +6,7 @@ export default {
 
   header: {
     fontSize: 20,
+    marginRight: 10
   },
 
   moreButton: {
@@ -15,7 +16,8 @@ export default {
     border: 'none',
     backgroundColor: 'none',
     padding: 10,
-    marginTop: 20
+    marginTop: 20,
+    cursor: 'pointer'
   },
 
   readAllButton: {
@@ -27,6 +29,16 @@ export default {
     color: 'white',
     borderColor: 'black',
     marginTop: 20,
-    marginBottom: 20
+    cursor: 'pointer'
+  },
+
+  star: {
+    width: 20, 
+    height: 20
+  },
+
+  centeredDiv: {
+    alignSelf: 'center', 
+    marginLeft: 10
   }
 };

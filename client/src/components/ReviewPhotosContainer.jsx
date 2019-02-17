@@ -39,10 +39,10 @@ class ReviewPhotosContainer extends React.Component {
         <div style={styles.reviewHeader}>
           <div>Photos from reviews</div>
           <div style={styles.arrowContainer}>
-            <button style={styles.arrow} onClick={this.clickLeft}>
+            <button style={styles.arrowLeft} onClick={this.clickLeft}>
               <img src="https://www.shareicon.net/data/10x10/2015/10/18/658096_bracket_512x512.png"></img>
             </button>
-            <button style={styles.arrow} onClick={this.clickRight}>
+            <button style={styles.arrowRight} onClick={this.clickRight}>
               <img src="https://www.shareicon.net/data/10x10/2015/10/18/658171_play_512x512.png"></img>
             </button>
           </div>

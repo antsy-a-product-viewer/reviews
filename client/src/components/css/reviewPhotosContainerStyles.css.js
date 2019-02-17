@@ -10,14 +10,23 @@ export default {
   },
 
   arrowContainer: {
-    alignSelf: 'center'
+    alignSelf: 'center',
+    margin: 5
   },
 
-  arrow: {
+  arrowLeft: {
     marginRight: 20,
+    padding: 'none',
+    border: 'none',
+    background: 'none',
+    cursor: 'pointer'
+  },
+
+  arrowRight: {
     marginLeft: 20,
     padding: 'none',
     border: 'none',
     background: 'none',
+    cursor: 'pointer'
   }
 };

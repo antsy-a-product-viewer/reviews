@@ -9,15 +9,43 @@ exports[`should render correctly with no props 1`] = `
     }
   }
 >
-  <h2
+  <div
     style={
       Object {
-        "fontSize": 20,
+        "display": "flex",
       }
     }
   >
-    Reviews
-  </h2>
+    <h2
+      style={
+        Object {
+          "fontSize": 20,
+        }
+      }
+    >
+      Reviews
+    </h2>
+    <div
+      style={
+        Object {
+          "alignSelf": "center",
+          "marginLeft": 10,
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "alignSelf": "center",
+          "marginLeft": 10,
+        }
+      }
+    >
+      (
+      0
+      )
+    </div>
+  </div>
   <ReviewContainer
     limit={4}
     reviews={Array []}
