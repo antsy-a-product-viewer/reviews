@@ -1,6 +1,6 @@
 export default {
   container: {
-    width: 750,
+    width: 600,
     fontFamily: 'Gill Sans'
   },
 
