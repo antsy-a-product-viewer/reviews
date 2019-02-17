@@ -35,7 +35,13 @@ export default {
     padding: 'none',
     border: 'none',
     background: 'none',
-    transform: 'translate(1140px, 25px)'
+    cursor: 'pointer',
+    display: 'block',
+    float: 'right',
+    zIndex: 3,
+    position: 'absolute',
+    right: 5,
+    top: 5,
   },
 
   buttonImg: {
