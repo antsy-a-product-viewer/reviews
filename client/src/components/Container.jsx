@@ -99,8 +99,8 @@ class Container extends React.Component {
     if (!this.state.showMore) {
       return (
         <div style={containerStyles.container}>
-          <div style={{display: 'flex'}}>
-            <h2 style={containerStyles.header}>Reviews</h2>
+          <div style={{display: 'flex', marginBottom: 10}}>
+            <div style={containerStyles.header}>Reviews</div>
             <div style={{alignSelf: 'center', marginLeft: 10}}>
               {_.times(this.state.averageStars, (n) =>{
                 return (
@@ -121,8 +121,8 @@ class Container extends React.Component {
     } else {
       return (
         <div style={containerStyles.container}>
-          <div style={{display: 'flex'}}>
-            <h2 style={containerStyles.header}>Reviews</h2>
+          <div style={{display: 'flex', marginBottom: 10}}>
+            <div style={containerStyles.header}>Reviews</div>
             <div style={{alignSelf: 'center', marginLeft: 10}}>
               {_.times(this.state.averageStars, (n) =>{
                 return (

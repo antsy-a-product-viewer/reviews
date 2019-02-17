@@ -26,6 +26,7 @@ export default {
     backgroundColor: 'black',
     color: 'white',
     borderColor: 'black',
-    marginTop: 20
+    marginTop: 20,
+    marginBottom: 20
   }
 };
