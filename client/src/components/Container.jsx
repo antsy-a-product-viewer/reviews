@@ -25,7 +25,7 @@ class Container extends React.Component {
       reviewImages: [],
       showModal: false,
       show: 4,
-      modal: []
+      modalReview: null
     };
   }
 
@@ -44,7 +44,8 @@ class Container extends React.Component {
     console.log(`e.target.id: ${e.target.id}`);
     if (e.target.id === 'modal-overlay' || e.target.id === 'close-modal') {
       this.setState({
-        showModal: !this.state.showModal
+        showModal: !this.state.showModal,
+        modalReview: null
       });
     }
   }

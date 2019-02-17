@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import _ from 'underscore';
-import Star from './Star.jsx'
+import Star from './Star.jsx';
 import Item from './Item.jsx';
 import modalStyles from './css/modalStyles.css.js';
 
@@ -16,7 +16,7 @@ const Modal = (props) => {
             <img style={modalStyles.image} src={props.review.review_img}></img>
           </div>
           <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
-            <div className="modalReview">
+            <div className="modalReview" style={{marginTop: 20}}>
               <div style={modalStyles.userInfo}>
                 <img style ={modalStyles.profileImg} src={props.review.user_img}></img>
                 <div style={modalStyles.username}>{props.review.user_name}</div>
@@ -33,8 +33,8 @@ const Modal = (props) => {
               </div>
             </div>
           </div>
-          <button id="close-modal" style={modalStyles.button} onClick={props.onClose}>
-            <img style={modalStyles.buttonImg} src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_close-512.png"></img>
+          <button style={modalStyles.button} onClick={props.onClose}>
+            <img id="close-modal" style={modalStyles.buttonImg} src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_close-512.png"></img>
           </button>
         </section>
       </div>
