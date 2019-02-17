@@ -33,10 +33,10 @@ class Container extends React.Component {
   }
 
   toggleModal(reviewImgIndex) {
-    console.log('toggleModal called');
+    console.log(`toggleModal called with: ${reviewImgIndex}`);
     this.setState({
-      showModal: !this.state.showModal,
-      modalReview: reviewImgIndex
+      modalReview: reviewImgIndex,
+      showModal: !this.state.showModal
     });
   }
 
@@ -113,7 +113,7 @@ class Container extends React.Component {
         <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false"/>
         <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
         <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
-        <Modal showModal={this.state.showModal} onClose={this.toggleModal} reviews={this.state.reviewImages[0]}/>
+        <Modal showModal={this.state.showModal} onClose={this.toggleModal} reviews={this.state.reviewImages[this.state.modalReview]}/>
       </div>
     );
   }

@@ -5,8 +5,6 @@ import Item from './Item.jsx';
 import modalStyles from './css/modalStyles.css.js';
 
 const Modal = (props) => {
-  
-
   if (!props.showModal) {
     return null;
   } else {
