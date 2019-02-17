@@ -1,7 +1,7 @@
 import React from 'react';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Modal from '../components/Modal.jsx';
 import Container from '../components/Container.jsx'
 
@@ -16,6 +16,18 @@ it('should render correctly when props.showModal is true', () => {
   
   expect(modal).toMatchSnapshot();
 });
+
+// it('should display the modal when showModal state is true', () =>{
+//   const props = {
+//     modalReview: 0,
+//     showModal: true
+//   };
+//   const modal = mount(<Modal showModal={props.showModal} review={reviewImages[props.modalReview]}/>)
+
+//   console.log(container.find('.modal').debug());
+
+//   expect(container.find('.modal').exists()).toEqual(true);
+// });
 
 const reviewImages = [
   {
