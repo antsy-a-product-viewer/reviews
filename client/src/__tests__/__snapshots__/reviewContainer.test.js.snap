@@ -37,6 +37,7 @@ exports[`should render correctly with props 1`] = `
             "user_name": "Jalen Paucek",
           }
         }
+        stars={5}
       />
       <Item
         key="72"
@@ -92,6 +93,7 @@ exports[`should render correctly with props 1`] = `
             "user_name": "Zella Blick",
           }
         }
+        stars={4}
       />
       <Item
         key="30"
@@ -147,6 +149,7 @@ exports[`should render correctly with props 1`] = `
             "user_name": "Deangelo Schuppe",
           }
         }
+        stars={0}
       />
       <Item
         key="91"
@@ -202,6 +205,7 @@ exports[`should render correctly with props 1`] = `
             "user_name": "Stacey Spencer",
           }
         }
+        stars={3}
       />
       <Item
         key="4"

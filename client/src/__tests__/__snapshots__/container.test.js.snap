@@ -16,22 +16,19 @@ exports[`should render correctly with no props 1`] = `
       }
     }
   >
-    <h2
+    <div
       style={
         Object {
           "fontSize": 20,
+          "marginRight": 10,
         }
       }
     >
       Reviews
-    </h2>
-    <div
-      style={
-        Object {
-          "alignSelf": "center",
-          "marginLeft": 10,
-        }
-      }
+    </div>
+    <Star
+      starClass="averageStars"
+      stars={0}
     />
     <div
       style={
@@ -51,24 +48,11 @@ exports[`should render correctly with no props 1`] = `
     reviews={Array []}
     showPrice="false"
   />
-  <div>
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "backgroundColor": "none",
-          "border": "none",
-          "fontFamily": "Gill Sans",
-          "fontSize": 16,
-          "marginTop": 20,
-          "padding": 10,
-          "textDecoration": "underline",
-        }
-      }
-    >
-      + More
-    </button>
-  </div>
+  <Button
+    currentNumber={4}
+    showMore={[Function]}
+    totalReviews={0}
+  />
   <ReviewPhotosContainer
     openModal={[Function]}
     reviewImages={Array []}

@@ -4,7 +4,10 @@ exports[`should render correctly with no props 1`] = `
 <div>
   <img
     className="photoCarouselImg"
+    id={0}
     key="119"
+    onClick={[Function]}
+    src="https://s3-us-west-1.amazonaws.com/antsyreviewimages/00119.jpg"
     style={
       Object {
         "clear": "both",
@@ -16,7 +19,10 @@ exports[`should render correctly with no props 1`] = `
   />
   <img
     className="photoCarouselImg"
+    id={1}
     key="35"
+    onClick={[Function]}
+    src="https://s3-us-west-1.amazonaws.com/antsyreviewimages/00035.jpg"
     style={
       Object {
         "clear": "both",
@@ -28,7 +34,10 @@ exports[`should render correctly with no props 1`] = `
   />
   <img
     className="photoCarouselImg"
+    id={2}
     key="48"
+    onClick={[Function]}
+    src="https://s3-us-west-1.amazonaws.com/antsyreviewimages/00048.jpg"
     style={
       Object {
         "clear": "both",
@@ -40,7 +49,10 @@ exports[`should render correctly with no props 1`] = `
   />
   <img
     className="photoCarouselImg"
+    id={3}
     key="141"
+    onClick={[Function]}
+    src="https://s3-us-west-1.amazonaws.com/antsyreviewimages/00141.jpg"
     style={
       Object {
         "clear": "both",
@@ -52,7 +64,10 @@ exports[`should render correctly with no props 1`] = `
   />
   <img
     className="photoCarouselImg"
+    id={4}
     key="164"
+    onClick={[Function]}
+    src="https://s3-us-west-1.amazonaws.com/antsyreviewimages/00164.jpg"
     style={
       Object {
         "clear": "both",

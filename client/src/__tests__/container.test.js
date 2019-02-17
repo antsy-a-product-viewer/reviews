@@ -21,7 +21,9 @@ it('should call getData during componentDidMount', () => {
 
 it('should display the modal when showModal state is true', () =>{
   const container = mount(<Container />);
-  container.setState({showModal: true});
+  container.setState({modalReview: 0, showModal: true});
+
+  console.log(container.find('.modal').debug());
 
   expect(container.find('.modal').exists()).toEqual(true);
 });
