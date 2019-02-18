@@ -3,6 +3,7 @@ export default {
     clear: 'both',
     maxWidth: 100,
     maxHeight: 100,
-    margin: 10
+    margin: 10,
+    cursor: 'pointer'
   }
 };

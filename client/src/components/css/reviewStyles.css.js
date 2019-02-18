@@ -10,7 +10,8 @@ export default {
 
   username: {
     textDecoration: 'underline',
-    margin: 5
+    margin: 5,
+    cursor: 'pointer'
   },
 
   date: {
