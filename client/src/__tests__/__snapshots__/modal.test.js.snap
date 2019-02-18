@@ -2,14 +2,25 @@
 
 exports[`should render correctly when props.showModal is true 1`] = `
 <div
+  className="modal"
+  id="modal-overlay"
   style={
     Object {
-      "background": "rgba(0, 0, 0, 0.6)",
-      "height": "100%",
+      "alignItems": "center",
+      "animation": "show .5s ease",
+      "backgroundColor": "rgba(0, 0, 0, 0.7)",
+      "bottom": 0,
+      "display": "flex",
+      "justifyContent": "center",
       "left": 0,
+      "opacity": 1,
+      "overflowX": "hidden",
+      "overflowY": "auto",
+      "padding": "1rem",
       "position": "fixed",
+      "right": 0,
       "top": 0,
-      "width": "100%",
+      "zIndex": "9999",
     }
   }
 >
@@ -27,148 +38,139 @@ exports[`should render correctly when props.showModal is true 1`] = `
       }
     }
   >
-    <img
-      src="https://s3-us-west-1.amazonaws.com/antsyitemsimages/00072.jpg"
+    <div>
+      <img
+        src="https://s3-us-west-1.amazonaws.com/antsyreviewimages/00242.jpg"
+        style={
+          Object {
+            "height": 565,
+            "width": 565,
+          }
+        }
+      />
+    </div>
+    <div
       style={
         Object {
-          "height": 565,
-          "width": 565,
+          "display": "flex",
+          "flexDirection": "column",
+          "justifyContent": "space-between",
         }
       }
-    />
-    <div>
+    >
       <div
+        className="modalReview"
         style={
           Object {
-            "display": "flex",
-            "margin": 20,
+            "marginTop": 20,
           }
         }
       >
-        <img
-          src="https://s3-us-west-1.amazonaws.com/antsyuserimages/00010.jpg"
-          style={
-            Object {
-              "borderRadius": 50,
-              "height": 50,
-              "width": 50,
-            }
-          }
-        />
         <div
           style={
             Object {
-              "alignSelf": "center",
-              "margin": 5,
-              "marginLeft": 15,
-              "textDecoration": "underline",
+              "display": "flex",
+              "margin": 20,
             }
           }
         >
-          Jalen Paucek
+          <img
+            src="https://s3-us-west-1.amazonaws.com/antsyuserimages/00016.jpg"
+            style={
+              Object {
+                "borderRadius": 50,
+                "height": 50,
+                "width": 50,
+              }
+            }
+          />
+          <div
+            style={
+              Object {
+                "alignSelf": "center",
+                "margin": 5,
+                "marginLeft": 15,
+                "textDecoration": "underline",
+              }
+            }
+          >
+            Peter Blick DDS
+          </div>
+          <div
+            style={
+              Object {
+                "alignSelf": "center",
+                "margin": 5,
+              }
+            }
+          >
+            Aug 01, 2014
+          </div>
         </div>
         <div
           style={
             Object {
-              "alignSelf": "center",
-              "margin": 5,
+              "margin": 20,
             }
           }
         >
-          Feb 15, 2014
+          <Star
+            stars={2}
+          />
+          <div>
+            You can't calculate the panel without bypassing the mobile SMS array!
+          </div>
         </div>
       </div>
       <div
-        style={
-          Object {
-            "margin": 20,
-          }
-        }
+        className="modalItem"
       >
-        <div>
-          <img
-            src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
-            style={
-              Object {
-                "height": "20px",
-                "width": "20px",
-              }
-            }
-          />
-          <img
-            src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
-            style={
-              Object {
-                "height": "20px",
-                "width": "20px",
-              }
-            }
-          />
-          <img
-            src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
-            style={
-              Object {
-                "height": "20px",
-                "width": "20px",
-              }
-            }
-          />
-          <img
-            src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
-            style={
-              Object {
-                "height": "20px",
-                "width": "20px",
-              }
-            }
-          />
-          <img
-            src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"
-            style={
-              Object {
-                "height": "20px",
-                "width": "20px",
-              }
-            }
-          />
-        </div>
-        <div>
-          You can't connect the pixel without overriding the auxiliary RSS card!
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 20,
-          }
-        }
-      >
-        <Item
-          review={
+        <div
+          style={
             Object {
-              "created_at": "2014-02-15T21:43:09.000Z",
-              "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00072.jpg",
-              "item_name": "Ergonomic Concrete Tuna",
-              "review": "You can't connect the pixel without overriding the auxiliary RSS card!",
-              "stars": 5,
-              "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00010.jpg",
-              "user_name": "Jalen Paucek",
+              "margin": 20,
             }
           }
-          showPrice="true"
-        />
+        >
+          <Item
+            review={
+              Object {
+                "created_at": "2014-08-02T02:54:51.000Z",
+                "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00087.jpg",
+                "item_name": "Rustic Plastic Chips",
+                "price": 474,
+                "review": "You can't calculate the panel without bypassing the mobile SMS array!",
+                "review_id": 242,
+                "review_img": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00242.jpg",
+                "stars": 2,
+                "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00016.jpg",
+                "user_name": "Peter Blick DDS",
+              }
+            }
+            showPrice="true"
+          />
+        </div>
       </div>
     </div>
     <button
+      className="closeModal"
       style={
         Object {
           "background": "none",
           "border": "none",
+          "cursor": "pointer",
+          "display": "block",
+          "float": "right",
           "padding": "none",
+          "position": "absolute",
+          "right": 5,
+          "top": 5,
+          "zIndex": 3,
         }
       }
     >
       <img
+        id="close-modal"
         src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_close-512.png"
         style={
           Object {

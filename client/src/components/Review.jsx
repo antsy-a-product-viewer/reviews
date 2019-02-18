@@ -16,7 +16,7 @@ const Review = (props) => {
       </div>
       <div>
         <div>
-          <Star stars={props.stars}/>
+          <Star starClass="review-star" stars={props.stars}/>
           <div>{props.review.review}</div>
           <ReviewImg style={{height: 300, width: 300, marginTop: 10}} review={props.review} imageClick={props.imageClick}/>
         </div>

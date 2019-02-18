@@ -32,7 +32,9 @@ exports[`should render correctly with no props 1`] = `
   </div>
   <div>
     <div>
-      <Star />
+      <Star
+        starClass="review-star"
+      />
       <div>
         I'll generate the cross-platform COM firewall, that should driver the XSS pixel!
       </div>

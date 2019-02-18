@@ -127,7 +127,7 @@ class Container extends React.Component {
           <div style={containerStyles.header}>
             Reviews
           </div>
-          <Star stars={this.state.averageStars}/>
+          <Star starClass="averageStars" stars={this.state.averageStars}/>
           <div style={containerStyles.centeredDiv}>
             ({this.state.reviews.length})
           </div>
