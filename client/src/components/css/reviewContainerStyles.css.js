@@ -1,8 +1,8 @@
 export default {
   container: {
     display: 'flex',
-    marginTop: 10,
-    marginBottom: 10
+    marginTop: 30,
+    marginBottom: 30
   },
 
   profileImg: {

@@ -115,7 +115,7 @@ class Container extends React.Component {
   render() {
     return (
       <div style={containerStyles.container}>
-        <div style={{display: 'flex'}}>
+        <div style={{display: 'flex', marginBottom: '-10px'}}>
           <div style={containerStyles.header}>
             Reviews
           </div>

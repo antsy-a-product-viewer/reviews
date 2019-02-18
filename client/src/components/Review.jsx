@@ -1,5 +1,6 @@
 import React from 'react';
 import Star from './Star.jsx';
+import ReviewImg from './ReviewImg.jsx';
 import moment from 'moment';
 import _ from 'underscore';
 import styles from './css/reviewStyles.css.js';
@@ -15,6 +16,7 @@ const Review = (props) => {
         <div>
           <Star stars={props.stars}/>
           <div>{props.review.review}</div>
+          <ReviewImg style={{height: 300, width: 300, marginTop: 10}} image={props.review.review_img}/>
         </div>
       </div>
     </div>
