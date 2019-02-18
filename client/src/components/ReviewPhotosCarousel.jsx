@@ -1,5 +1,4 @@
 import React from 'react';
-import ReviewImg from './ReviewImg.jsx';
 import styles from './css/reviewPhotosCarouselStyles.css';
 
 const ReviewPhotosCarousel = (props) => {
@@ -15,7 +14,6 @@ const ReviewPhotosCarousel = (props) => {
       {props.reviewImages.slice(minIndex, maxIndex).map((image, index) => {
         return (
           <img id={index} key={image.review_id} onClick={getIndex} style={styles.reviewImage} src={image.review_img}></img>
-          // <ReviewImg id={index} key={image.review_id} onClick={getIndex} style={styles.reviewImage} image={image.review_img}/>
         );
       })}
     </div>
