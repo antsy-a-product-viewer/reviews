@@ -55,14 +55,6 @@ exports[`should render correctly with no props 1`] = `
     showMore={[Function]}
     totalReviews={0}
   />
-<<<<<<< HEAD
-  <Button
-    currentNumber={4}
-    showMore={[Function]}
-    totalReviews={0}
-  />
-=======
->>>>>>> a9e48bd63e5bb1e6a3495c2f805ead8b2bdc955c
   <ReviewPhotosContainer
     openModal={[Function]}
     reviewImages={Array []}

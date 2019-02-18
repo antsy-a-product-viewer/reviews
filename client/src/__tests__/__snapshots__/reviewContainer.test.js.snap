@@ -4,9 +4,12 @@ exports[`should render correctly with props 1`] = `
 <div>
   <div
     className="review"
+    key="0"
     style={
       Object {
         "display": "flex",
+        "marginBottom": 10,
+        "marginTop": 10,
       }
     }
   >
@@ -15,6 +18,7 @@ exports[`should render correctly with props 1`] = `
       style={
         Object {
           "borderRadius": 50,
+          "cursor": "pointer",
           "height": 50,
           "marginRight": 10,
           "width": 50,
@@ -60,9 +64,12 @@ exports[`should render correctly with props 1`] = `
   </div>
   <div
     className="review"
+    key="1"
     style={
       Object {
         "display": "flex",
+        "marginBottom": 10,
+        "marginTop": 10,
       }
     }
   >
@@ -71,6 +78,7 @@ exports[`should render correctly with props 1`] = `
       style={
         Object {
           "borderRadius": 50,
+          "cursor": "pointer",
           "height": 50,
           "marginRight": 10,
           "width": 50,
@@ -116,9 +124,12 @@ exports[`should render correctly with props 1`] = `
   </div>
   <div
     className="review"
+    key="2"
     style={
       Object {
         "display": "flex",
+        "marginBottom": 10,
+        "marginTop": 10,
       }
     }
   >
@@ -127,6 +138,7 @@ exports[`should render correctly with props 1`] = `
       style={
         Object {
           "borderRadius": 50,
+          "cursor": "pointer",
           "height": 50,
           "marginRight": 10,
           "width": 50,
@@ -172,9 +184,12 @@ exports[`should render correctly with props 1`] = `
   </div>
   <div
     className="review"
+    key="3"
     style={
       Object {
         "display": "flex",
+        "marginBottom": 10,
+        "marginTop": 10,
       }
     }
   >
@@ -183,6 +198,7 @@ exports[`should render correctly with props 1`] = `
       style={
         Object {
           "borderRadius": 50,
+          "cursor": "pointer",
           "height": 50,
           "marginRight": 10,
           "width": 50,

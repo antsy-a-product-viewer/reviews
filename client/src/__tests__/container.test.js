@@ -20,35 +20,6 @@ it('should call getData during componentDidMount', () => {
   expect(getData).toHaveBeenCalledTimes(1);
 });
 
-// it('should display the modal when showModal state is true', () =>{
-//   const container = mount(<Container />);
-//   container.setState({modalReview: 0, showModal: true});
-
-//   console.log(container.find('.modal').debug());
-
-//   expect(container.find('.modal').exists()).toEqual(true);
-// });
-
-// it('should close the modal on button click', () => {
-//   const closeModal = jest.spyOn(Container.prototype, 'closeModal');
-//   const container = mount(<Container />);
-//   container.setState({showModal: true});
-//   container.find('.closeModal').simulate('click');
-
-//   expect(closeModal).toHaveBeenCalledTimes(1);
-// });
-
-// it('should display average stars based on function call', () => {
-//   const getAverageStars = jest.spyOn(Container.prototype, 'getAverageStars');
-//   const container = shallow(<Container />);
-//   container.instance().getAverageStars(reviews);
-//   container.update();
-
-//   console.log(container.find('.averageStars').debug());
-
-//   expect(container.find('.averageStars')).toHaveLength(3);
-// });
-
 it('should set the ReviewContainer limit to 20 when showMore is clicked', () => {
   const showMore = jest.spyOn(Container.prototype, 'showMore');
   const container = shallow(<Container />);

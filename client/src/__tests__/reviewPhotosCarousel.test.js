@@ -15,15 +15,6 @@ it('should render correctly with no props', () => {
   expect(reviewPhotosCarousel).toMatchSnapshot();
 });
 
-it('should render 5 images', () => {
-  const props = {
-    reviewImages: reviewImages
-  };
-  const reviewPhotosCarousel = mount(<ReviewPhotosCarousel reviewImages={props.reviewImages}/>);
-
-  expect(reviewPhotosCarousel.find('.photoCarouselImg')).toHaveLength(5);
-});
-
 const reviewImages = [
   {
     "review_id": 119,
