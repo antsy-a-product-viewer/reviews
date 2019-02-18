@@ -13,7 +13,7 @@ const ReviewPhotosCarousel = (props) => {
     <div style={{height: 120}}>
       {props.reviewImages.slice(minIndex, maxIndex).map((image, index) => {
         return (
-          <img id={index} key={image.review_id} onClick={getIndex} style={styles.reviewImage} src={image.review_img}></img>
+          <img className="photoCarouselImg" id={index} key={image.review_id} onClick={getIndex} style={styles.reviewImage} src={image.review_img}></img>
         );
       })}
     </div>

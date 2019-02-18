@@ -28,6 +28,7 @@ exports[`should render correctly with no props 1`] = `
       Reviews
     </div>
     <Star
+      starClass="averageStars"
       stars={0}
     />
     <div
