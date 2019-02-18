@@ -1,15 +1,18 @@
 import React from 'react';
 import axios from 'axios';
 import _ from 'underscore';
+import Star from './Star.jsx';
 import ReviewPhotosContainer from './ReviewPhotosContainer.jsx';
 import Modal from './Modal.jsx';
 import containerStyles from './css/containerStyles.css.js';
 import ReviewContainer from './ReviewContainer.jsx';
+import Button from './Button.jsx';
 
 class Container extends React.Component {
   constructor(props) {
     super(props);
-    this.toggleModal = this.toggleModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
     this.getData = this.getData.bind(this);
     this.getReviews = this.getReviews.bind(this);
     this.getReviewImages = this.getReviewImages.bind(this);
@@ -22,7 +25,8 @@ class Container extends React.Component {
       reviews: [],
       reviewImages: [],
       showModal: false,
-      showMore: false,
+      show: 4,
+      modalReview: null
     };
   }
 
@@ -30,15 +34,24 @@ class Container extends React.Component {
     this.getData();
   }
 
-  toggleModal() {
+  openModal(reviewImgIndex) {
     this.setState({
+      modalReview: reviewImgIndex,
       showModal: !this.state.showModal
     });
   }
 
+  closeModal(e) {
+    if (e.target.id === 'modal-overlay' || e.target.id === 'close-modal') {
+      this.setState({
+        showModal: !this.state.showModal,
+        modalReview: null
+      });
+    }
+  }
+
   getData() {
     var endpoint = window.location.pathname + 'store_id';
-    console.log(endpoint);
     axios.get(endpoint)
       .then((res) => {
         var storeId = res.data[0].store_id;
@@ -91,61 +104,34 @@ class Container extends React.Component {
 
   showMore() {
     this.setState({
-      showMore: !this.state.showMore
+      show: 20
     });
   }
-
+  
   visitItem(itemId) {
     window.location.pathname = `/items/${itemId}`;
   }
-
-
   
   render() {
-    if (!this.state.showMore) {
-      return (
-        <div style={containerStyles.container}>
-          <div style={{display: 'flex'}}>
-            <h2 style={containerStyles.header}>Reviews</h2>
-            <div style={{alignSelf: 'center', marginLeft: 10}}>
-              {_.times(this.state.averageStars, (n) =>{
-                return (
-                  <img key={n} style={{width: '20px', height: '20px'}} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
-                );
-              })}
-            </div>
-            <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
+    return (
+      <div style={containerStyles.container}>
+        <div style={{display: 'flex'}}>
+          <div style={containerStyles.header}>
+            Reviews
           </div>
-          <ReviewContainer reviews={this.state.reviews} limit={4} showPrice="false" visitItem={this.visitItem}/>
-          <div>
-            <button style={containerStyles.moreButton} onClick={this.showMore}>+ More</button>
+          <Star stars={this.state.averageStars}/>
+          <div style={containerStyles.centeredDiv}>
+            ({this.state.reviews.length})
           </div>
-          <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
-          <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
         </div>
-      );
-    } else {
-      return (
-        <div style={containerStyles.container}>
-          <div style={{display: 'flex'}}>
-            <h2 style={containerStyles.header}>Reviews</h2>
-            <div style={{alignSelf: 'center', marginLeft: 10}}>
-              {_.times(this.state.averageStars, (n) =>{
-                return (
-                  <img key={n} style={{width: '20px', height: '20px'}} src="https://s3-us-west-1.amazonaws.com/anstyicons/icon-star-512.png"></img>
-                );
-              })}
-            </div>
-            <div style={{alignSelf: 'center', marginLeft: 10}}>({this.state.reviews.length})</div>
-          </div>
-          <ReviewContainer reviews={this.state.reviews} limit={20} showPrice="false" visitItem={this.visitItem}/>
-          <button style={containerStyles.readAllButton}>Read All Reviews ({this.state.reviews.length})</button>
-          <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.toggleModal}/>
-          <Modal showModal={this.state.showModal} onClose={this.toggleModal}/>
-        </div>
-      );
-    }
+        <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false" visitItem={this.visitItem}/>
+        <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
+        <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.openModal}/>
+        <Modal showModal={this.state.showModal} onClose={this.closeModal} review={this.state.reviewImages[this.state.modalReview]}/>
+      </div>
+    );
   }
 }
+
 
 export default Container;

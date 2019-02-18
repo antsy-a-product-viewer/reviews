@@ -1,11 +1,13 @@
 export default {
   container: {
-    width: 750,
+    width: 600,
     fontFamily: 'Gill Sans'
   },
 
   header: {
     fontSize: 20,
+    marginRight: 10,
+    alignSelf: 'center'
   },
 
   moreButton: {
@@ -15,7 +17,7 @@ export default {
     border: 'none',
     backgroundColor: 'none',
     padding: 10,
-    marginTop: 20
+    cursor: 'pointer'
   },
 
   readAllButton: {
@@ -26,6 +28,16 @@ export default {
     backgroundColor: 'black',
     color: 'white',
     borderColor: 'black',
-    marginTop: 20
+    cursor: 'pointer'
+  },
+
+  star: {
+    width: 20, 
+    height: 20
+  },
+
+  centeredDiv: {
+    alignSelf: 'center', 
+    marginLeft: 10
   }
 };

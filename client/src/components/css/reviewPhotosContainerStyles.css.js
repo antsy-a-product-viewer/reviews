@@ -6,18 +6,28 @@ export default {
 
   reviewHeader: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    marginTop: 20
   },
 
   arrowContainer: {
-    alignSelf: 'center'
+    alignSelf: 'center',
+    margin: 5
   },
 
-  arrow: {
+  arrowLeft: {
     marginRight: 20,
+    padding: 'none',
+    border: 'none',
+    background: 'none',
+    cursor: 'pointer'
+  },
+
+  arrowRight: {
     marginLeft: 20,
     padding: 'none',
     border: 'none',
     background: 'none',
+    cursor: 'pointer'
   }
 };

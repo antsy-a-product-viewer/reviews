@@ -20,7 +20,7 @@ const Item = (props) => {
         <img id={props.review.item_id} style={itemStyles.itemImg} onClick={clickItem} src={props.review.item_img}></img>
         <div id={props.review.item_id} style={itemStyles.reviewItemInfo} onClick={clickItem}>
           <div>{props.review.item_name}</div>
-          <div>$36.00</div>
+          <div>${props.review.price}.00</div>
         </div>
       </div>
     );
