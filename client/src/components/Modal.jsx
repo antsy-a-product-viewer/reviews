@@ -29,7 +29,7 @@ const Modal = (props) => {
             </div>
             <div className="modalItem">
               <div style={modalStyles.item}>
-                <Item showPrice="true" review={props.review}/>
+                <Item showPrice="true" review={props.review} visitItem={props.visitItem}/>
               </div>
             </div>
           </div>

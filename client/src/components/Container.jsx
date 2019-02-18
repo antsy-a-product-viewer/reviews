@@ -135,7 +135,7 @@ class Container extends React.Component {
         <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false" visitItem={this.visitItem} imageClick={this.imageClick}/>
         <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
         <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.openModal}/>
-        <Modal showModal={this.state.showModal} onClose={this.closeModal} review={this.state.reviewImages[this.state.modalReview]}/>
+        <Modal showModal={this.state.showModal} onClose={this.closeModal} visitItem={this.visitItem} review={this.state.reviewImages[this.state.modalReview]}/>
       </div>
     );
   }
