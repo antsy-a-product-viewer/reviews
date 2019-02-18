@@ -19,7 +19,7 @@ class Container extends React.Component {
     this.getAverageStars = this.getAverageStars.bind(this);
     this.showMore = this.showMore.bind(this);
     this.visitItem = this.visitItem.bind(this);
-    this.imageClick = this.imageClick.bind(this);
+    this.reviewImageClick = this.reviewImageClick.bind(this);
     this.state = {
       storeId: 0,
       averageStars: 0,
@@ -113,7 +113,7 @@ class Container extends React.Component {
     window.location.pathname = `/items/${itemId}`;
   }
 
-  imageClick(id) {
+  reviewImageClick(id) {
     this.setState({
       modalReview: _.findIndex(this.state.reviewImages, {review_id: parseInt(id)}),
       showModal: true
@@ -132,7 +132,7 @@ class Container extends React.Component {
             ({this.state.reviews.length})
           </div>
         </div>
-        <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false" visitItem={this.visitItem} imageClick={this.imageClick}/>
+        <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false" visitItem={this.visitItem} imageClick={this.reviewImageClick}/>
         <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
         <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.openModal}/>
         <Modal showModal={this.state.showModal} onClose={this.closeModal} visitItem={this.visitItem} review={this.state.reviewImages[this.state.modalReview]}/>
