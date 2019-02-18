@@ -19,6 +19,7 @@ class Container extends React.Component {
     this.getAverageStars = this.getAverageStars.bind(this);
     this.showMore = this.showMore.bind(this);
     this.visitItem = this.visitItem.bind(this);
+    this.imageClick = this.imageClick.bind(this);
     this.state = {
       storeId: 0,
       averageStars: 0,
@@ -111,6 +112,13 @@ class Container extends React.Component {
   visitItem(itemId) {
     window.location.pathname = `/items/${itemId}`;
   }
+
+  imageClick(id) {
+    console.log(`id from in container: `, id);
+    console.log(this.state.reviewImages);
+    const index = _.findIndex(this.state.reviewImages, {review_id: id});
+    console.log(`index: `, index);
+  }
   
   render() {
     return (
@@ -124,7 +132,7 @@ class Container extends React.Component {
             ({this.state.reviews.length})
           </div>
         </div>
-        <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false" visitItem={this.visitItem}/>
+        <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false" visitItem={this.visitItem} imageClick={this.imageClick}/>
         <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
         <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.openModal}/>
         <Modal showModal={this.state.showModal} onClose={this.closeModal} review={this.state.reviewImages[this.state.modalReview]}/>

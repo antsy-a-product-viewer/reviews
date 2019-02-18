@@ -6,6 +6,8 @@ import _ from 'underscore';
 import styles from './css/reviewStyles.css.js';
 
 const Review = (props) => {
+  
+
   return (
     <div>
       <div style={styles.info}>
@@ -16,7 +18,7 @@ const Review = (props) => {
         <div>
           <Star stars={props.stars}/>
           <div>{props.review.review}</div>
-          <ReviewImg style={{height: 300, width: 300, marginTop: 10}} image={props.review.review_img}/>
+          <ReviewImg style={{height: 300, width: 300, marginTop: 10}} review={props.review} imageClick={props.imageClick}/>
         </div>
       </div>
     </div>

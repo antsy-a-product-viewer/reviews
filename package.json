@@ -21,7 +21,7 @@
     "migrations": "node_modules/.bin/knex migrate:latest",
     "seed": "node_modules/.bin/knex seed:run",
     "seed-db": "npm run create-db && npm run migrations && npm run seed",
-    "test": "jest --verbose --watchAll --coverage", 
+    "test": "jest --verbose --watchAll --coverage",
     "update": "jest --updateSnapshot"
   },
   "dependencies": {
