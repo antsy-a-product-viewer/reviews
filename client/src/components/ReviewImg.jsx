@@ -2,7 +2,6 @@ import React from 'react';
 
 const ReviewImg = (props) => {
   const clickImage = (event) => {
-    console.log(`id:`, event.target.id);
     props.imageClick(event.target.id);
   };
 

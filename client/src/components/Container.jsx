@@ -114,10 +114,10 @@ class Container extends React.Component {
   }
 
   imageClick(id) {
-    console.log(`id from in container: `, id);
-    console.log(this.state.reviewImages);
-    const index = _.findIndex(this.state.reviewImages, {review_id: id});
-    console.log(`index: `, index);
+    this.setState({
+      modalReview: _.findIndex(this.state.reviewImages, {review_id: parseInt(id)}),
+      showModal: true
+    });
   }
   
   render() {
