@@ -14,12 +14,13 @@ exports[`should render correctly with reviewImages from props 1`] = `
       Object {
         "display": "flex",
         "justifyContent": "space-between",
+        "marginTop": 20,
       }
     }
   >
-    <h3>
+    <div>
       Photos from reviews
-    </h3>
+    </div>
     <div
       style={
         Object {
@@ -29,6 +30,7 @@ exports[`should render correctly with reviewImages from props 1`] = `
       }
     >
       <button
+        onClick={[Function]}
         style={
           Object {
             "background": "none",
@@ -44,6 +46,7 @@ exports[`should render correctly with reviewImages from props 1`] = `
         />
       </button>
       <button
+        onClick={[Function]}
         style={
           Object {
             "background": "none",
@@ -61,6 +64,7 @@ exports[`should render correctly with reviewImages from props 1`] = `
     </div>
   </div>
   <ReviewPhotosCarousel
+    page={1}
     reviewImages={
       Array [
         Object {

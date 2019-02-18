@@ -18,6 +18,7 @@ class Container extends React.Component {
     this.getReviewImages = this.getReviewImages.bind(this);
     this.getAverageStars = this.getAverageStars.bind(this);
     this.showMore = this.showMore.bind(this);
+    this.visitItem = this.visitItem.bind(this);
     this.state = {
       storeId: 0,
       averageStars: 0,
@@ -41,7 +42,6 @@ class Container extends React.Component {
   }
 
   closeModal(e) {
-    console.log(`e.target.id: ${e.target.id}`);
     if (e.target.id === 'modal-overlay' || e.target.id === 'close-modal') {
       this.setState({
         showModal: !this.state.showModal,
@@ -51,8 +51,8 @@ class Container extends React.Component {
   }
 
   getData() {
-    var itemId = Math.floor(Math.random() * 100);
-    axios.get(`/items/${itemId}`)
+    var endpoint = window.location.pathname + 'store_id';
+    axios.get(endpoint)
       .then((res) => {
         var storeId = res.data[0].store_id;
         this.setState({
@@ -108,6 +108,10 @@ class Container extends React.Component {
     });
   }
   
+  visitItem(itemId) {
+    window.location.pathname = `/items/${itemId}`;
+  }
+  
   render() {
     return (
       <div style={containerStyles.container}>
@@ -115,12 +119,16 @@ class Container extends React.Component {
           <div style={containerStyles.header}>
             Reviews
           </div>
+<<<<<<< HEAD
           <Star starClass="averageStars" stars={this.state.averageStars}/>
+=======
+          <Star stars={this.state.averageStars}/>
+>>>>>>> a9e48bd63e5bb1e6a3495c2f805ead8b2bdc955c
           <div style={containerStyles.centeredDiv}>
             ({this.state.reviews.length})
           </div>
         </div>
-        <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false"/>
+        <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false" visitItem={this.visitItem}/>
         <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
         <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.openModal}/>
         <Modal showModal={this.state.showModal} onClose={this.closeModal} review={this.state.reviewImages[this.state.modalReview]}/>

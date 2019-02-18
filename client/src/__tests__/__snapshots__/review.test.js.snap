@@ -12,6 +12,7 @@ exports[`should render correctly with no props 1`] = `
     <div
       style={
         Object {
+          "cursor": "pointer",
           "margin": 5,
           "textDecoration": "underline",
         }

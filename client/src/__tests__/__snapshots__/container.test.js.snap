@@ -5,7 +5,7 @@ exports[`should render correctly with no props 1`] = `
   style={
     Object {
       "fontFamily": "Gill Sans",
-      "width": 750,
+      "width": 600,
     }
   }
 >
@@ -19,6 +19,7 @@ exports[`should render correctly with no props 1`] = `
     <div
       style={
         Object {
+          "alignSelf": "center",
           "fontSize": 20,
           "marginRight": 10,
         }
@@ -47,12 +48,21 @@ exports[`should render correctly with no props 1`] = `
     limit={4}
     reviews={Array []}
     showPrice="false"
+    visitItem={[Function]}
   />
   <Button
     currentNumber={4}
     showMore={[Function]}
     totalReviews={0}
   />
+<<<<<<< HEAD
+  <Button
+    currentNumber={4}
+    showMore={[Function]}
+    totalReviews={0}
+  />
+=======
+>>>>>>> a9e48bd63e5bb1e6a3495c2f805ead8b2bdc955c
   <ReviewPhotosContainer
     openModal={[Function]}
     reviewImages={Array []}
