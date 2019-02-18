@@ -1,61 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render correctly with no props 1`] = `
-<div>
-  <img
-    key="119"
-    style={
-      Object {
-        "clear": "both",
-        "margin": 10,
-        "maxHeight": 100,
-        "maxWidth": 100,
-      }
+<div
+  style={
+    Object {
+      "height": 120,
     }
-  />
-  <img
-    key="35"
-    style={
-      Object {
-        "clear": "both",
-        "margin": 10,
-        "maxHeight": 100,
-        "maxWidth": 100,
-      }
-    }
-  />
-  <img
-    key="48"
-    style={
-      Object {
-        "clear": "both",
-        "margin": 10,
-        "maxHeight": 100,
-        "maxWidth": 100,
-      }
-    }
-  />
-  <img
-    key="141"
-    style={
-      Object {
-        "clear": "both",
-        "margin": 10,
-        "maxHeight": 100,
-        "maxWidth": 100,
-      }
-    }
-  />
-  <img
-    key="164"
-    style={
-      Object {
-        "clear": "both",
-        "margin": 10,
-        "maxHeight": 100,
-        "maxWidth": 100,
-      }
-    }
-  />
-</div>
+  }
+/>
 `;

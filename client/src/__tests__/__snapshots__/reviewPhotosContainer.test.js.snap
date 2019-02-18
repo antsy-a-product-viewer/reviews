@@ -14,25 +14,28 @@ exports[`should render correctly with reviewImages from props 1`] = `
       Object {
         "display": "flex",
         "justifyContent": "space-between",
+        "marginTop": 20,
       }
     }
   >
-    <h3>
+    <div>
       Photos from reviews
-    </h3>
+    </div>
     <div
       style={
         Object {
           "alignSelf": "center",
+          "margin": 5,
         }
       }
     >
       <button
+        onClick={[Function]}
         style={
           Object {
             "background": "none",
             "border": "none",
-            "marginLeft": 20,
+            "cursor": "pointer",
             "marginRight": 20,
             "padding": "none",
           }
@@ -43,12 +46,13 @@ exports[`should render correctly with reviewImages from props 1`] = `
         />
       </button>
       <button
+        onClick={[Function]}
         style={
           Object {
             "background": "none",
             "border": "none",
+            "cursor": "pointer",
             "marginLeft": 20,
-            "marginRight": 20,
             "padding": "none",
           }
         }
@@ -60,6 +64,7 @@ exports[`should render correctly with reviewImages from props 1`] = `
     </div>
   </div>
   <ReviewPhotosCarousel
+    page={1}
     reviewImages={
       Array [
         Object {

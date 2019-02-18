@@ -10,7 +10,7 @@ const ReviewPhotosCarousel = (props) => {
     props.openModal(event.target.id);
   };
   return (
-    <div>
+    <div style={{height: 120}}>
       {props.reviewImages.slice(minIndex, maxIndex).map((image, index) => {
         return (
           <img id={index} key={image.review_id} onClick={getIndex} style={styles.reviewImage} src={image.review_img}></img>
