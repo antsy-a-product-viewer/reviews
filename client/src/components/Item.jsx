@@ -3,7 +3,6 @@ import itemStyles from './css/itemStyles.css';
 
 const Item = (props) => {
   const clickItem = (event) => {
-    console.log(event.target.id);
     props.visitItem(event.target.id);
   };
 
