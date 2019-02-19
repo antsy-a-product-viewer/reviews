@@ -17,13 +17,11 @@
 ## Usage
 
 1. create a `keys.js` file which will contain your mysql credentials: 
-var mysqlConfig = {
+> var mysqlConfig = {
   mysqlUsername: '',
   mysqlPassword: '',
-} - check knexfile.js to see how this file is imported
-
-
-exports.mysqlConfig = mysqlConfig;
+} exports.mysqlConfig = mysqlConfig;
+- check knexfile.js to see how this file is imported
 
 2. `npm run seed-db` - this runs migrations and seeds the db created the db to use in mysql and creates a migrations folder showing that these migrations were run. If you ever want to start from scratch your first step would be to `npm run rollback` which will rollback the migrations and get rid of the db
 
