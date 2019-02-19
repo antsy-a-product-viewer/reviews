@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('./db');
 const app = express();
 const path = require('path');
-const port = 3000;
+const port = 3020;
 
 app.use('/products/:productId', express.static(path.join(__dirname, '/../client/dist')));
 
