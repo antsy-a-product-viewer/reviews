@@ -109,8 +109,8 @@ class Container extends React.Component {
     });
   }
   
-  visitItem(itemId) {
-    window.location.pathname = `/items/${itemId}`;
+  visitItem(productId) {
+    window.location.pathname = `/items/${productId}`;
   }
 
   reviewImageClick(id) {
