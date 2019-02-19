@@ -20,7 +20,7 @@
 var mysqlConfig = {
   mysqlUsername: '',
   mysqlPassword: '',
-}
+} - check knexfile.js to see how this file is imported
 
 
 exports.mysqlConfig = mysqlConfig;
