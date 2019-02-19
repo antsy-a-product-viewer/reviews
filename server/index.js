@@ -4,11 +4,11 @@ const app = express();
 const path = require('path');
 const port = 3000;
 
-app.use('/items/:itemId', express.static(path.join(__dirname, '/../client/dist')));
+app.use('/products/:productId', express.static(path.join(__dirname, '/../client/dist')));
 
-app.get('/items/:itemId/store_id', (req, res) => {
-  var itemId = req.params.itemId;
-  db.getStoreFromItem(itemId, (err, data) => {
+app.get('/products/:productId/store_id', (req, res) => {
+  var productId = req.params.productId;
+  db.getStoreFromItem(productId, (err, data) => {
     if (err) {
       console.log('error getting storeId: ', err);
       res.status(400).send(err);
