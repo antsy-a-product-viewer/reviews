@@ -16,18 +16,17 @@
 
 ## Usage
 
-1. create a `keys.js` file which will contain your mysql credentials: 
-> var mysqlConfig = {
-  mysqlUsername: '',
-  mysqlPassword: '',
-} exports.mysqlConfig = mysqlConfig;
-- check knexfile.js to see how this file is imported
+1. rename `sampleKeys.js` file to `keys.js` which will contain your mysql credentials
 
-2. `npm run seed-db` - this runs migrations and seeds the db created the db to use in mysql and creates a migrations folder showing that these migrations were run. If you ever want to start from scratch your first step would be to `npm run rollback` which will rollback the migrations and get rid of the db
+2. rename `sampleConfig.txt` file to `config.txt` which will contain your mysql credentials
 
-3. `npm run react-dev` - this will start webpack
+3. `npm run create-db` - creates the database in mysql
 
-4. `npm run server` - starts nodemon on port 3020
+4. `npm run seed-db` - this runs migrations and seeds the db created the db to use in mysql and creates a migrations folder showing that these migrations were run. If you ever want to start from scratch your first step would be to `npm run rollback` which will rollback the migrations and get rid of the db
+
+5. `npm run react-dev` - this will start webpack
+
+6. `npm run server` - starts nodemon on port 3020
 
 
 ## Requirements
