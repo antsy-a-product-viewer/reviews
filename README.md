@@ -16,14 +16,20 @@
 
 ## Usage
 
-> Some usage instructions
+1. rename `sampleKeys.js` file to `keys.js` which will contain your mysql credentials
+
+2. rename `sampleConfig.txt` file to `config.txt` which will contain your mysql credentials
+
+3. `npm run create-db` - creates the database in mysql
+
+4. `npm run seed-db` - this runs migrations and seeds the db created the db to use in mysql and creates a migrations folder showing that these migrations were run. If you ever want to start from scratch your first step would be to `npm run rollback` which will rollback the migrations and get rid of the db
+
+5. `npm run react-dev` - this will start webpack
+
+6. `npm run server` - starts nodemon on port 3020
+
 
 ## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
 
 ## Development
 
@@ -31,8 +37,5 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 From within the root directory:
 
-```sh
-npm install -g webpack
-npm install
-```
+`npm install`
 

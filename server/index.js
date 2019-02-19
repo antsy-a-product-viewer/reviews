@@ -2,11 +2,11 @@ const express = require('express');
 const db = require('./db');
 const app = express();
 const path = require('path');
-const port = 3000;
+const port = 3020;
 
-app.use('/products/:productId', express.static(path.join(__dirname, '/../client/dist')));
+app.use('/product/:productId', express.static(path.join(__dirname, '/../client/dist')));
 
-app.get('/products/:productId/store_id', (req, res) => {
+app.get('/product/:productId/store_id', (req, res) => {
   var productId = req.params.productId;
   db.getStoreFromItem(productId, (err, data) => {
     if (err) {
