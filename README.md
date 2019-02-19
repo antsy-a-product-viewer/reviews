@@ -16,7 +16,7 @@
 
 ## Usage
 
-> 1. create a `keys.js` file which will contain your mysql credentials: 
+1. create a `keys.js` file which will contain your mysql credentials: 
 var mysqlConfig = {
   mysqlUsername: '',
   mysqlPassword: '',
