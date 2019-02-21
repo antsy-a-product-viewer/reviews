@@ -1,16 +1,17 @@
 // Update with your config settings.
-// var mysqlConfig = require('./keys.js').mysqlConfig;
+var mysqlConfig = require('./keys.js');
 
 module.exports = {
 
   development: {
     client: 'mysql',
     connection: {
+      host: mysqlConfig.rdsConfig.host,
       database: 'antsy_reviews',
-      user:     '',
-      password: ''
-      // user:     mysqlConfig.mysqlUsername,
-      // password: mysqlConfig.mysqlPassword
+      user: mysqlConfig.rdsConfig.username,
+      password: mysqlConfig.rdsConfig.password
+      // user:     mysqlConfig.localConfig.username,
+      // password: mysqlConfig.localConfig.password
     },
     pool: {
       min: 2,

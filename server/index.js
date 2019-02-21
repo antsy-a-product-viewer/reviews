@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('./db');
 const app = express();
 const path = require('path');
-const port = 3020;
+const port = 8081;
 
 app.use('/product/:productId', express.static(path.join(__dirname, '/../client/dist')));
 
