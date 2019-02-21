@@ -1,5 +1,5 @@
 // Update with your config settings.
-var mysqlConfig = require('./keys.js').mysqlConfig;
+// var mysqlConfig = require('./keys.js').mysqlConfig;
 
 module.exports = {
 
@@ -7,8 +7,10 @@ module.exports = {
     client: 'mysql',
     connection: {
       database: 'antsy_reviews',
-      user:     mysqlConfig.mysqlUsername,
-      password: mysqlConfig.mysqlPassword
+      user:     '',
+      password: ''
+      // user:     mysqlConfig.mysqlUsername,
+      // password: mysqlConfig.mysqlPassword
     },
     pool: {
       min: 2,
