@@ -14,6 +14,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "node server/index.js",
     "server": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
     "create-db": "mysql  --defaults-extra-file=./config.txt < schema.sql",
