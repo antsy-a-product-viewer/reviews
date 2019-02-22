@@ -13,6 +13,17 @@ class ReviewPhotosContainer extends React.Component {
     };
   }
 
+  // componentDidMount() {
+  //   const reviewImgs = this.props.reviews.map((image) => {
+  //     if (image.review_img) {
+  //       return image;
+  //     }
+  //   });
+  //   this.setState({
+  //     reviewImages: reviewImgs
+  //   });
+  // }
+
   totalPages() {
     return Math.floor(this.props.reviewImages.length / 5);
   }
@@ -47,7 +58,7 @@ class ReviewPhotosContainer extends React.Component {
             </button>
           </div>
         </div>
-        <ReviewPhotosCarousel reviewImages={this.props.reviewImages} openModal={this.props.openModal} page={this.state.page}/>
+        <ReviewPhotosCarousel reviews={this.props.reviews} reviewImages={this.props.reviewImages} openModal={this.props.openModal} page={this.state.page}/>
       </div>
     );
   }

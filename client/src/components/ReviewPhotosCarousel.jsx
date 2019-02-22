@@ -10,16 +10,19 @@ const ReviewPhotosCarousel = (props) => {
     console.log(event.target.id)
     props.openModal(event.target.id);
   };
-  return (
-    <div style={{height: 120}}>
-      {props.reviewImages.slice(minIndex, maxIndex).map((image, index) => {
-        // var id = index + (5 * props.page);
-        return (
-          <img className="photoCarouselImg" id={image.review_id} key={image.review_id} onClick={getIndex} style={styles.reviewImage} src={image.review_img}></img>
-        );
-      })}
-    </div>
-  );
+  if (props.reviewImages.length > 0) {
+    return (
+      <div style={{height: 120}}>
+        {props.reviewImages.slice(minIndex, maxIndex).map((image, index) => {
+          return (
+            <img className="photoCarouselImg" id={image.review_id} key={image.review_id} onClick={getIndex} style={styles.reviewImage} src={image.review_img}></img>
+          );
+        })}
+      </div>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default ReviewPhotosCarousel;
