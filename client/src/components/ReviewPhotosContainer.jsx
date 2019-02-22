@@ -14,7 +14,7 @@ class ReviewPhotosContainer extends React.Component {
   }
 
   totalPages() {
-    return Math.ceil(this.props.reviewImages.length / 5);
+    return Math.floor(this.props.reviewImages.length / 5);
   }
 
   clickRight() {
@@ -26,7 +26,7 @@ class ReviewPhotosContainer extends React.Component {
   }
 
   clickLeft() {
-    if (this.state.page > 1) {
+    if (this.state.page > 0) {
       this.setState({
         page: this.state.page - 1
       });

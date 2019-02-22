@@ -114,8 +114,10 @@ class Container extends React.Component {
   }
 
   reviewImageClick(id) {
+    console.log(`reviewImageClick with id: ${id}`)
     this.setState({
-      modalReview: _.findIndex(this.state.reviewImages, {review_id: parseInt(id)}),
+      // modalReview: _.findIndex(this.state.reviewImages, {review_id: parseInt(id)}),
+      modalReview: _.findIndex(this.state.reviews, {review_id: parseInt(id)}),
       showModal: true
     });
   }
@@ -134,8 +136,8 @@ class Container extends React.Component {
         </div>
         <ReviewContainer reviews={this.state.reviews} limit={this.state.show} showPrice="false" visitItem={this.visitItem} imageClick={this.reviewImageClick}/>
         <Button currentNumber={this.state.show} showMore={this.showMore} totalReviews={this.state.reviews.length}/>
-        <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.openModal}/>
-        <Modal showModal={this.state.showModal} onClose={this.closeModal} visitItem={this.visitItem} review={this.state.reviewImages[this.state.modalReview]}/>
+        <ReviewPhotosContainer reviewImages={this.state.reviewImages} openModal={this.reviewImageClick}/>
+        <Modal showModal={this.state.showModal} onClose={this.closeModal} visitItem={this.visitItem} review={this.state.reviews[this.state.modalReview]}/>
       </div>
     );
   }
