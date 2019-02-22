@@ -1,11 +1,5 @@
 export default {
   modal: {
-    // position: 'fixed',
-    // top: 0,
-    // left: 0,
-    // width: '100%',
-    // height: '100%',
-    // background: 'rgba(0, 0, 0, 0.6)'
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -31,12 +25,7 @@ export default {
     top: '45%',
     left: '50%',
     transform: 'translate(-50%,-50%)',
-    display: 'flex',
-    // width: '100%',
-    // backgroundColor: '#fff',
-    // boxShadow: [0, 0, '0.625rem', 'rgba(0, 0, 0, 0.2)'],
-    // minWidth: 576,
-    // width: 576
+    display: 'flex'
   },
 
   reviewContent: {

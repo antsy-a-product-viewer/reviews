@@ -51,7 +51,7 @@ class Container extends React.Component {
   }
 
   getData() {
-    var endpoint = 'http://13.52.66.18' + window.location.pathname + 'store_id';
+    const endpoint = 'http://13.52.66.18' + window.location.pathname + 'store_id';
     axios.get(endpoint)
       .then((res) => {
         const storeId = res.data[0].store_id;
