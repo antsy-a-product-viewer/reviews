@@ -23,8 +23,8 @@ class Container extends React.Component {
       averageStars: 0,
       reviews: [],
       reviewImages: [],
-      showModal: false,
       show: 4,
+      showModal: false,
       modalReview: null
     };
   }
@@ -35,7 +35,6 @@ class Container extends React.Component {
 
 
   openModal(id) {
-    console.log(`openModal with id: ${id}`)
     this.setState({
       modalReview: _.findIndex(this.state.reviews, {review_id: parseInt(id)}),
       showModal: true
@@ -56,9 +55,6 @@ class Container extends React.Component {
     axios.get(endpoint)
       .then((res) => {
         const storeId = res.data[0].store_id;
-        this.setState({
-          storeId: storeId
-        });
         this.getReviews(storeId);
       })
       .catch((err) => {
@@ -69,14 +65,16 @@ class Container extends React.Component {
   getReviews(storeId) {
     axios.get(`http://13.52.66.18/stores/${storeId}/reviews`)
       .then((res) => {
-        this.getAverageStars(res.data);
-        const reviews = res.data; 
+        const reviews = res.data;
+        const averageStars = this.getAverageStars(reviews);
         const reviewImages = reviews.filter((item) => {
           return item.review_img !== null;
         });
         this.setState({
+          storeId: storeId,
           reviews: reviews,
-          reviewImages: reviewImages
+          reviewImages: reviewImages,
+          averageStars: averageStars
         });
       })
       .catch((err) => {
@@ -90,9 +88,7 @@ class Container extends React.Component {
       total += reviews[i].stars;
     }
     var average = Math.floor(total / reviews.length);
-    this.setState({
-      averageStars: average
-    });
+    return average;
   }
 
   showMore() {
