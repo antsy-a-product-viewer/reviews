@@ -9,7 +9,7 @@ class ReviewPhotosContainer extends React.Component {
     this.clickRight = this.clickRight.bind(this);
     this.clickLeft = this.clickLeft.bind(this);
     this.state = {
-      page: 1
+      page: 0
     };
   }
 

@@ -9,6 +9,7 @@ const Modal = (props) => {
   if (!props.showModal) {
     return null;
   } else {
+    console.log(props.review);
     return (
       <div className="modal" id="modal-overlay" style={modalStyles.modal} onClick={props.onClose}>
         <section style={modalStyles.modalMain}>
