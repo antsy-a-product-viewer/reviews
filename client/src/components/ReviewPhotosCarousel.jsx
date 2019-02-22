@@ -9,7 +9,7 @@ const ReviewPhotosCarousel = (props) => {
   const getIndex = (event) => {
     props.openModal(event.target.id);
   };
-  
+
   if (props.reviewImages.length > 0) {
     return (
       <div style={{height: 120}}>
