@@ -110,7 +110,7 @@ class Container extends React.Component {
   }
   
   visitItem(productId) {
-    window.location.pathname = `http://13.52.66.18/product/${productId}`;
+    window.location.pathname = `/product/${productId}`;
   }
 
   reviewImageClick(id) {
