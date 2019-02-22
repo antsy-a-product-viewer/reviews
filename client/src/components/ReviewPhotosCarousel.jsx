@@ -7,9 +7,9 @@ const ReviewPhotosCarousel = (props) => {
   const maxIndex = (props.page + 1) * 5;
 
   const getIndex = (event) => {
-    console.log(event.target.id)
     props.openModal(event.target.id);
   };
+  
   if (props.reviewImages.length > 0) {
     return (
       <div style={{height: 120}}>
