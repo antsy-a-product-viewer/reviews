@@ -8,8 +8,8 @@ exports[`should render correctly with props 1`] = `
     style={
       Object {
         "display": "flex",
-        "marginBottom": 10,
-        "marginTop": 10,
+        "marginBottom": 30,
+        "marginTop": 30,
       }
     }
   >
@@ -68,8 +68,8 @@ exports[`should render correctly with props 1`] = `
     style={
       Object {
         "display": "flex",
-        "marginBottom": 10,
-        "marginTop": 10,
+        "marginBottom": 30,
+        "marginTop": 30,
       }
     }
   >
@@ -128,8 +128,8 @@ exports[`should render correctly with props 1`] = `
     style={
       Object {
         "display": "flex",
-        "marginBottom": 10,
-        "marginTop": 10,
+        "marginBottom": 30,
+        "marginTop": 30,
       }
     }
   >
@@ -188,8 +188,8 @@ exports[`should render correctly with props 1`] = `
     style={
       Object {
         "display": "flex",
-        "marginBottom": 10,
-        "marginTop": 10,
+        "marginBottom": 30,
+        "marginTop": 30,
       }
     }
   >

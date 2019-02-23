@@ -64,7 +64,7 @@ exports[`should render correctly with reviewImages from props 1`] = `
     </div>
   </div>
   <ReviewPhotosCarousel
-    page={1}
+    page={0}
     reviewImages={
       Array [
         Object {

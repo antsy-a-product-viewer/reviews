@@ -13,6 +13,7 @@ exports[`should render correctly with no props 1`] = `
     style={
       Object {
         "display": "flex",
+        "marginBottom": "-10px",
       }
     }
   >
@@ -45,6 +46,7 @@ exports[`should render correctly with no props 1`] = `
     </div>
   </div>
   <ReviewContainer
+    imageClick={[Function]}
     limit={4}
     reviews={Array []}
     showPrice="false"
@@ -58,10 +60,12 @@ exports[`should render correctly with no props 1`] = `
   <ReviewPhotosContainer
     openModal={[Function]}
     reviewImages={Array []}
+    reviews={Array []}
   />
   <Modal
     onClose={[Function]}
     showModal={false}
+    visitItem={[Function]}
   />
 </div>
 `;

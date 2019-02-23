@@ -23,8 +23,6 @@ exports[`should render price with if props.price is set to true 1`] = `
     }
   />
   <div
-    id={30}
-    onClick={[Function]}
     style={
       Object {
         "cursor": "pointer",
@@ -32,7 +30,10 @@ exports[`should render price with if props.price is set to true 1`] = `
       }
     }
   >
-    <div>
+    <div
+      id={30}
+      onClick={[Function]}
+    >
       Handmade Concrete Salad
     </div>
     <div>
