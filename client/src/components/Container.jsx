@@ -9,7 +9,7 @@ import ReviewContainer from './ReviewContainer.jsx';
 import Button from './Button.jsx';
 
 class Container extends React.Component {
-  constructor(props) {
+  letructor(props) {
     super(props);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -51,10 +51,10 @@ class Container extends React.Component {
   }
 
   getData() {
-    const endpoint = 'http://13.52.66.18' + window.location.pathname + 'store_id';
+    let endpoint = 'http://13.52.66.18' + window.location.pathname + 'store_id';
     axios.get(endpoint)
       .then((res) => {
-        const storeId = res.data[0].store_id;
+        let storeId = res.data[0].store_id;
         this.getReviews(storeId);
       })
       .catch((err) => {
@@ -65,9 +65,9 @@ class Container extends React.Component {
   getReviews(storeId) {
     axios.get(`http://13.52.66.18/stores/${storeId}/reviews`)
       .then((res) => {
-        const reviews = res.data;
-        const averageStars = this.getAverageStars(reviews);
-        const reviewImages = reviews.filter((item) => {
+        let reviews = res.data;
+        let averageStars = this.getAverageStars(reviews);
+        let reviewImages = reviews.filter((item) => {
           return item.review_img !== null;
         });
         this.setState({
@@ -83,11 +83,11 @@ class Container extends React.Component {
   }
 
   getAverageStars(reviews) {
-    var total = 0;
-    for (var i = 0; i < reviews.length; i++) {
+    let total = 0;
+    for (let i = 0; i < reviews.length; i++) {
       total += reviews[i].stars;
     }
-    var average = Math.floor(total / reviews.length);
+    let average = Math.floor(total / reviews.length);
     return average;
   }
 

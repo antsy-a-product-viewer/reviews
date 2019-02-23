@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './css/reviewPhotosCarouselStyles.css';
 
 const ReviewPhotosCarousel = (props) => {
-  const minIndex = props.page * 5;
+  let minIndex = props.page * 5;
   
-  const maxIndex = (props.page + 1) * 5;
+  let maxIndex = (props.page + 1) * 5;
 
   const getIndex = (event) => {
     props.openModal(event.target.id);

@@ -15,7 +15,7 @@ app.use(function (req, res, next) {
 });
 
 app.get('/product/:productId/store_id', (req, res) => {
-  var productId = req.params.productId;
+  let productId = req.params.productId;
   db.getStoreFromItem(productId, (err, data) => {
     if (err) {
       console.log('error getting storeId: ', err);
@@ -28,7 +28,7 @@ app.get('/product/:productId/store_id', (req, res) => {
 });
 
 app.get('/stores/:storeId/reviews', (req, res) => {
-  var storeId = req.params.storeId;
+  let storeId = req.params.storeId;
   db.getAllReviewsForStore(storeId, (err, data) => {
     if (err) {
       console.log('error getting store reviews: ', err);
