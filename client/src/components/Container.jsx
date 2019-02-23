@@ -9,7 +9,7 @@ import ReviewContainer from './ReviewContainer.jsx';
 import Button from './Button.jsx';
 
 class Container extends React.Component {
-  letructor(props) {
+  constructor(props) {
     super(props);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
