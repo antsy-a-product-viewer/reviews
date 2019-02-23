@@ -10,6 +10,6 @@ RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
 RUN npm install
 
-EXPOSE 3020
+EXPOSE 8081
 
 CMD [ "npm", "start" ]

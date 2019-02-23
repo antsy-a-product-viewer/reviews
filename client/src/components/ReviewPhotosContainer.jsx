@@ -9,12 +9,12 @@ class ReviewPhotosContainer extends React.Component {
     this.clickRight = this.clickRight.bind(this);
     this.clickLeft = this.clickLeft.bind(this);
     this.state = {
-      page: 1
+      page: 0
     };
   }
 
   totalPages() {
-    return Math.ceil(this.props.reviewImages.length / 5);
+    return Math.floor(this.props.reviewImages.length / 5);
   }
 
   clickRight() {
@@ -26,7 +26,7 @@ class ReviewPhotosContainer extends React.Component {
   }
 
   clickLeft() {
-    if (this.state.page > 1) {
+    if (this.state.page > 0) {
       this.setState({
         page: this.state.page - 1
       });
@@ -47,7 +47,7 @@ class ReviewPhotosContainer extends React.Component {
             </button>
           </div>
         </div>
-        <ReviewPhotosCarousel reviewImages={this.props.reviewImages} openModal={this.props.openModal} page={this.state.page}/>
+        <ReviewPhotosCarousel reviews={this.props.reviews} reviewImages={this.props.reviewImages} openModal={this.props.openModal} page={this.state.page}/>
       </div>
     );
   }

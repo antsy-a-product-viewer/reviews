@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node server/index.js",
     "server": "nodemon server/index.js",
-    "react-dev": "webpack -d --watch",
+    "webpack": "webpack",
     "create-db": "mysql  --defaults-extra-file=./config.txt < schema.sql",
     "rollback": "node_modules/.bin/knex migrate:rollback",
     "migrations": "node_modules/.bin/knex migrate:latest",
