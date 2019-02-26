@@ -1,129 +1,355 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render correctly with reviewImages from props 1`] = `
-<div
-  style={
-    Object {
-      "float": "left",
-      "width": 600,
-    }
+<ReviewPhotosContainer
+  reviewImages={
+    Array [
+      Object {
+        "created_at": "2014-04-18T13:22:26.000Z",
+        "item_id": 58,
+        "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00058.jpg",
+        "item_name": "Gorgeous Fresh Mouse",
+        "price": 922,
+        "review": "The USB card is down, program the haptic sensor so we can generate the IB microchip!",
+        "review_id": 896,
+        "review_img": null,
+        "stars": 4,
+        "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00002.jpg",
+        "user_name": "Santina Kulas",
+      },
+      Object {
+        "created_at": "2014-05-03T17:17:53.000Z",
+        "item_id": 58,
+        "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00058.jpg",
+        "item_name": "Gorgeous Fresh Mouse",
+        "price": 922,
+        "review": "You can't bypass the firewall without navigating the multi-byte AI port!",
+        "review_id": 764,
+        "review_img": null,
+        "stars": 3,
+        "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00016.jpg",
+        "user_name": "Santa Predovic",
+      },
+      Object {
+        "created_at": "2014-05-04T23:39:10.000Z",
+        "item_id": 92,
+        "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00092.jpg",
+        "item_name": "Rustic Cotton Soap",
+        "price": 122,
+        "review": "We need to program the cross-platform COM feed!",
+        "review_id": 347,
+        "review_img": null,
+        "stars": 1,
+        "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00013.jpg",
+        "user_name": "Adela Prosacco",
+      },
+      Object {
+        "created_at": "2014-08-08T15:29:40.000Z",
+        "item_id": 92,
+        "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00092.jpg",
+        "item_name": "Rustic Cotton Soap",
+        "price": 122,
+        "review": "We need to hack the primary TCP port!",
+        "review_id": 587,
+        "review_img": null,
+        "stars": 1,
+        "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00004.jpg",
+        "user_name": "Dr. Ford Lehner",
+      },
+      Object {
+        "created_at": "2014-08-30T22:47:57.000Z",
+        "item_id": 61,
+        "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00061.jpg",
+        "item_name": "Licensed Concrete Mouse",
+        "price": 238,
+        "review": "You can't bypass the monitor without calculating the bluetooth RAM pixel!",
+        "review_id": 412,
+        "review_img": null,
+        "stars": 2,
+        "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00007.jpg",
+        "user_name": "Lesley Kirlin",
+      },
+      Object {
+        "created_at": "2014-11-15T05:14:15.000Z",
+        "item_id": 61,
+        "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00061.jpg",
+        "item_name": "Licensed Concrete Mouse",
+        "price": 238,
+        "review": "bypassing the microchip won't do anything, we need to input the redundant EXE monitor!",
+        "review_id": 533,
+        "review_img": null,
+        "stars": 5,
+        "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00004.jpg",
+        "user_name": "Dr. Ford Lehner",
+      },
+      Object {
+        "created_at": "2015-02-10T12:28:12.000Z",
+        "item_id": 22,
+        "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00022.jpg",
+        "item_name": "Handmade Wooden Soap",
+        "price": 68,
+        "review": "Try to parse the SMS protocol, maybe it will generate the haptic program!",
+        "review_id": 322,
+        "review_img": null,
+        "stars": 5,
+        "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00013.jpg",
+        "user_name": "Adela Prosacco",
+      },
+    ]
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "space-between",
-        "marginTop": 20,
+        "float": "left",
+        "width": 600,
       }
     }
   >
-    <div>
-      Photos from reviews
-    </div>
     <div
       style={
         Object {
-          "alignSelf": "center",
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "space-between",
+          "marginTop": 20,
         }
       }
     >
-      <button
-        onClick={[Function]}
+      <div>
+        Photos from reviews
+      </div>
+      <div
+        className="arrows"
         style={
           Object {
-            "background": "none",
-            "border": "none",
-            "cursor": "pointer",
-            "marginRight": 20,
-            "padding": "none",
+            "alignSelf": "center",
+            "margin": 5,
           }
         }
       >
-        <img
-          src="https://www.shareicon.net/data/10x10/2015/10/18/658096_bracket_512x512.png"
-        />
-      </button>
-      <button
-        onClick={[Function]}
-        style={
-          Object {
-            "background": "none",
-            "border": "none",
-            "cursor": "pointer",
-            "marginLeft": 20,
-            "padding": "none",
+        <button
+          id="click-left"
+          onClick={[Function]}
+          style={
+            Object {
+              "background": "none",
+              "border": "none",
+              "cursor": "pointer",
+              "marginRight": 20,
+              "padding": "none",
+            }
           }
-        }
-      >
-        <img
-          src="https://www.shareicon.net/data/10x10/2015/10/18/658171_play_512x512.png"
-        />
-      </button>
+        >
+          <img
+            src="https://www.shareicon.net/data/10x10/2015/10/18/658096_bracket_512x512.png"
+          />
+        </button>
+        <button
+          id="click-right"
+          onClick={[Function]}
+          style={
+            Object {
+              "background": "none",
+              "border": "none",
+              "cursor": "pointer",
+              "marginLeft": 20,
+              "padding": "none",
+            }
+          }
+        >
+          <img
+            src="https://www.shareicon.net/data/10x10/2015/10/18/658171_play_512x512.png"
+          />
+        </button>
+      </div>
     </div>
+    <ReviewPhotosCarousel
+      page={0}
+      reviewImages={
+        Array [
+          Object {
+            "created_at": "2014-04-18T13:22:26.000Z",
+            "item_id": 58,
+            "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00058.jpg",
+            "item_name": "Gorgeous Fresh Mouse",
+            "price": 922,
+            "review": "The USB card is down, program the haptic sensor so we can generate the IB microchip!",
+            "review_id": 896,
+            "review_img": null,
+            "stars": 4,
+            "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00002.jpg",
+            "user_name": "Santina Kulas",
+          },
+          Object {
+            "created_at": "2014-05-03T17:17:53.000Z",
+            "item_id": 58,
+            "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00058.jpg",
+            "item_name": "Gorgeous Fresh Mouse",
+            "price": 922,
+            "review": "You can't bypass the firewall without navigating the multi-byte AI port!",
+            "review_id": 764,
+            "review_img": null,
+            "stars": 3,
+            "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00016.jpg",
+            "user_name": "Santa Predovic",
+          },
+          Object {
+            "created_at": "2014-05-04T23:39:10.000Z",
+            "item_id": 92,
+            "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00092.jpg",
+            "item_name": "Rustic Cotton Soap",
+            "price": 122,
+            "review": "We need to program the cross-platform COM feed!",
+            "review_id": 347,
+            "review_img": null,
+            "stars": 1,
+            "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00013.jpg",
+            "user_name": "Adela Prosacco",
+          },
+          Object {
+            "created_at": "2014-08-08T15:29:40.000Z",
+            "item_id": 92,
+            "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00092.jpg",
+            "item_name": "Rustic Cotton Soap",
+            "price": 122,
+            "review": "We need to hack the primary TCP port!",
+            "review_id": 587,
+            "review_img": null,
+            "stars": 1,
+            "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00004.jpg",
+            "user_name": "Dr. Ford Lehner",
+          },
+          Object {
+            "created_at": "2014-08-30T22:47:57.000Z",
+            "item_id": 61,
+            "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00061.jpg",
+            "item_name": "Licensed Concrete Mouse",
+            "price": 238,
+            "review": "You can't bypass the monitor without calculating the bluetooth RAM pixel!",
+            "review_id": 412,
+            "review_img": null,
+            "stars": 2,
+            "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00007.jpg",
+            "user_name": "Lesley Kirlin",
+          },
+          Object {
+            "created_at": "2014-11-15T05:14:15.000Z",
+            "item_id": 61,
+            "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00061.jpg",
+            "item_name": "Licensed Concrete Mouse",
+            "price": 238,
+            "review": "bypassing the microchip won't do anything, we need to input the redundant EXE monitor!",
+            "review_id": 533,
+            "review_img": null,
+            "stars": 5,
+            "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00004.jpg",
+            "user_name": "Dr. Ford Lehner",
+          },
+          Object {
+            "created_at": "2015-02-10T12:28:12.000Z",
+            "item_id": 22,
+            "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00022.jpg",
+            "item_name": "Handmade Wooden Soap",
+            "price": 68,
+            "review": "Try to parse the SMS protocol, maybe it will generate the haptic program!",
+            "review_id": 322,
+            "review_img": null,
+            "stars": 5,
+            "user_img": "https://s3-us-west-1.amazonaws.com/antsyuserimages/00013.jpg",
+            "user_name": "Adela Prosacco",
+          },
+        ]
+      }
+    >
+      <div
+        style={
+          Object {
+            "height": 120,
+          }
+        }
+      >
+        <img
+          className="photoCarouselImg"
+          id={896}
+          key="896"
+          onClick={[Function]}
+          src={null}
+          style={
+            Object {
+              "clear": "both",
+              "cursor": "pointer",
+              "height": 100,
+              "margin": 10,
+              "width": 100,
+            }
+          }
+        />
+        <img
+          className="photoCarouselImg"
+          id={764}
+          key="764"
+          onClick={[Function]}
+          src={null}
+          style={
+            Object {
+              "clear": "both",
+              "cursor": "pointer",
+              "height": 100,
+              "margin": 10,
+              "width": 100,
+            }
+          }
+        />
+        <img
+          className="photoCarouselImg"
+          id={347}
+          key="347"
+          onClick={[Function]}
+          src={null}
+          style={
+            Object {
+              "clear": "both",
+              "cursor": "pointer",
+              "height": 100,
+              "margin": 10,
+              "width": 100,
+            }
+          }
+        />
+        <img
+          className="photoCarouselImg"
+          id={587}
+          key="587"
+          onClick={[Function]}
+          src={null}
+          style={
+            Object {
+              "clear": "both",
+              "cursor": "pointer",
+              "height": 100,
+              "margin": 10,
+              "width": 100,
+            }
+          }
+        />
+        <img
+          className="photoCarouselImg"
+          id={412}
+          key="412"
+          onClick={[Function]}
+          src={null}
+          style={
+            Object {
+              "clear": "both",
+              "cursor": "pointer",
+              "height": 100,
+              "margin": 10,
+              "width": 100,
+            }
+          }
+        />
+      </div>
+    </ReviewPhotosCarousel>
   </div>
-  <ReviewPhotosCarousel
-    page={0}
-    reviewImages={
-      Array [
-        Object {
-          "created_at": "2014-03-14T22:37:45.000Z",
-          "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00030.jpg",
-          "item_name": "Handmade Concrete Salad",
-          "price": 155,
-          "review": "Try to hack the SQL transmitter, maybe it will navigate the multi-byte bus!",
-          "review_id": 119,
-          "review_img": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00119.jpg",
-          "stars": 4,
-          "user_name": "Zella Blick",
-        },
-        Object {
-          "created_at": "2014-03-27T15:37:49.000Z",
-          "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00091.jpg",
-          "item_name": "Rustic Metal Chair",
-          "price": 699,
-          "review": "I'll generate the cross-platform COM firewall, that should driver the XSS pixel!",
-          "review_id": 35,
-          "review_img": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00035.jpg",
-          "stars": 0,
-          "user_name": "Deangelo Schuppe",
-        },
-        Object {
-          "created_at": "2014-05-30T15:12:28.000Z",
-          "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00081.jpg",
-          "item_name": "Intelligent Fresh Car",
-          "price": 198,
-          "review": "The JSON program is down, override the neural firewall so we can reboot the CSS card!",
-          "review_id": 48,
-          "review_img": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00048.jpg",
-          "stars": 2,
-          "user_name": "Adelbert Kovacek",
-        },
-        Object {
-          "created_at": "2014-08-16T12:50:16.000Z",
-          "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00030.jpg",
-          "item_name": "Handmade Concrete Salad",
-          "price": 155,
-          "review": "Use the virtual TCP driver, then you can bypass the redundant alarm!",
-          "review_id": 141,
-          "review_img": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00141.jpg",
-          "stars": 0,
-          "user_name": "Jackson Trantow",
-        },
-        Object {
-          "created_at": "2014-09-18T05:37:56.000Z",
-          "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00072.jpg",
-          "item_name": "Ergonomic Concrete Tuna",
-          "price": 795,
-          "review": "I'll transmit the bluetooth SSL driver, that should card the USB driver!",
-          "review_id": 164,
-          "review_img": "https://s3-us-west-1.amazonaws.com/antsyreviewimages/00164.jpg",
-          "stars": 1,
-          "user_name": "Avis Quitzon",
-        },
-      ]
-    }
-  />
-</div>
+</ReviewPhotosContainer>
 `;

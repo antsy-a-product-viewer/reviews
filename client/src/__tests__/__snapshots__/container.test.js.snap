@@ -10,6 +10,7 @@ exports[`should render correctly with no props 1`] = `
   }
 >
   <div
+    className="header"
     style={
       Object {
         "display": "flex",

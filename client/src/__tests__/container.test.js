@@ -21,12 +21,18 @@ it('should call getData during componentDidMount', () => {
 });
 
 it('should set the ReviewContainer limit to 20 when showMore is clicked', () => {
-  const showMore = jest.spyOn(Container.prototype, 'showMore');
   const container = shallow(<Container />);
   container.instance().showMore();
   container.update();
 
   expect(container.find('ReviewContainer').prop('limit')).toEqual(20);
+});
+
+it('should return the correct number of average stars', () => {
+  const container = shallow(<Container />);
+  const stars = container.instance().getAverageStars(reviews);
+
+  expect(stars).toEqual(3);
 });
 
 const reviews = [
@@ -85,4 +91,4 @@ const reviews = [
       "item_img": "https://s3-us-west-1.amazonaws.com/antsyitemsimages/00095.jpg",
       "item_name": "Unbranded Metal Fish"
   }
-]
+];

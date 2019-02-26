@@ -9,7 +9,8 @@ class ReviewPhotosContainer extends React.Component {
     this.clickRight = this.clickRight.bind(this);
     this.clickLeft = this.clickLeft.bind(this);
     this.state = {
-      page: 0
+      page: 0,
+      maxPage: null
     };
   }
 
@@ -38,11 +39,11 @@ class ReviewPhotosContainer extends React.Component {
       <div style={styles.reviewPhotos}>
         <div style={styles.reviewHeader}>
           <div>Photos from reviews</div>
-          <div style={styles.arrowContainer}>
-            <button style={styles.arrowLeft} onClick={this.clickLeft}>
+          <div className="arrows" style={styles.arrowContainer}>
+            <button id="click-left" style={styles.arrowLeft} onClick={this.clickLeft}>
               <img src="https://www.shareicon.net/data/10x10/2015/10/18/658096_bracket_512x512.png"></img>
             </button>
-            <button style={styles.arrowRight} onClick={this.clickRight}>
+            <button id="click-right" style={styles.arrowRight} onClick={this.clickRight}>
               <img src="https://www.shareicon.net/data/10x10/2015/10/18/658171_play_512x512.png"></img>
             </button>
           </div>

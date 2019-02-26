@@ -51,7 +51,8 @@ class Container extends React.Component {
   }
 
   getData() {
-    let endpoint = 'http://13.52.66.18' + window.location.pathname + 'store_id';
+    // let endpoint = 'http://13.52.66.18' + window.location.pathname + 'store_id';
+    let endpoint = window.location.pathname + 'store_id';
     axios.get(endpoint)
       .then((res) => {
         let storeId = res.data[0].store_id;
@@ -63,7 +64,8 @@ class Container extends React.Component {
   }
 
   getReviews(storeId) {
-    axios.get(`http://13.52.66.18/stores/${storeId}/reviews`)
+    // axios.get(`http://13.52.66.18/stores/${storeId}/reviews`)
+    axios.get(`/stores/${storeId}/reviews`)
       .then((res) => {
         let reviews = res.data;
         let averageStars = this.getAverageStars(reviews);
@@ -104,7 +106,7 @@ class Container extends React.Component {
   render() {
     return (
       <div style={containerStyles.container}>
-        <div style={{display: 'flex', marginBottom: '-10px'}}>
+        <div className="header" style={{display: 'flex', marginBottom: '-10px'}}>
           <div style={containerStyles.header}>
             Reviews
           </div>
